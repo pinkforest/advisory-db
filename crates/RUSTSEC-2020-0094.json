@@ -1,6 +1,6 @@
 {
   "id": "RUSTSEC-2020-0094",
-  "modified": "2021-02-26T01:00:25+00:00",
+  "modified": "2021-08-21T09:38:49+00:00",
   "published": "2020-12-01T12:00:00+00:00",
   "aliases": [
     "CVE-2020-36203"
@@ -16,7 +16,8 @@
   "affects": {
     "ranges": [
       {
-        "type": "SEMVER"
+        "type": "SEMVER",
+        "fixed": "0.6.1"
       }
     ]
   },
