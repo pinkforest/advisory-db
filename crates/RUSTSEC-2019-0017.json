@@ -1,6 +1,6 @@
 {
   "id": "RUSTSEC-2019-0017",
-  "modified": "2020-10-02T01:29:11+00:00",
+  "modified": "2021-08-22T01:18:11+00:00",
   "published": "2019-09-01T12:00:00+00:00",
   "aliases": [
     "CVE-2019-16141"
@@ -12,7 +12,7 @@
     "purl": "pkg:cargo/once_cell"
   },
   "summary": "Panic during initialization of Lazy<T> might trigger undefined behavior",
-  "details": "If during the first dereference of Lazy<T> the initialization function panics,\nsubsequent derefernces will execute `std::hints::unreachable_unchecked`.\n\nApplications with `panic = \"abort\"` are not affected, as there will be no\nsubsequent dereferences.",
+  "details": "If during the first dereference of Lazy<T> the initialization function panics,\nsubsequent dereferences will execute `std::hints::unreachable_unchecked`.\n\nApplications with `panic = \"abort\"` are not affected, as there will be no\nsubsequent dereferences.",
   "affects": {
     "ranges": [
       {

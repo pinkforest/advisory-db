@@ -1,6 +1,6 @@
 {
   "id": "RUSTSEC-2019-0036",
-  "modified": "2021-01-04T17:02:59+00:00",
+  "modified": "2021-08-22T01:18:11+00:00",
   "published": "2019-11-13T12:00:00+00:00",
   "aliases": [
     "CVE-2020-25575",
@@ -12,7 +12,7 @@
     "name": "failure",
     "purl": "pkg:cargo/failure"
   },
-  "summary": "Type confusion if __private_get_type_id__ is overriden",
+  "summary": "Type confusion if __private_get_type_id__ is overridden",
   "details": "Safe Rust code can implement malfunctioning `__private_get_type_id__` and cause\ntype confusion when downcasting, which is an undefined behavior.\n\nUsers who derive `Fail` trait are not affected.",
   "affects": {
     "ranges": [

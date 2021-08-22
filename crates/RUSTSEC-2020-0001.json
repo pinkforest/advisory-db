@@ -1,6 +1,6 @@
 {
   "id": "RUSTSEC-2020-0001",
-  "modified": "2021-01-04T17:02:59+00:00",
+  "modified": "2021-08-22T01:18:11+00:00",
   "published": "2020-01-06T12:00:00+00:00",
   "aliases": [
     "CVE-2020-35857"
@@ -11,7 +11,7 @@
     "name": "trust-dns-server",
     "purl": "pkg:cargo/trust-dns-server"
   },
-  "summary": "Stack overflow when resolving addional records from MX or SRV null targets",
+  "summary": "Stack overflow when resolving additional records from MX or SRV null targets",
   "details": "There's a stack overflow leading to a crash and potential DOS when processing\nadditional records for return of MX or SRV record types from the server.\n\nThis is only possible when a zone is configured with a null target for MX or SRV records, i.e. '.'.\n\nExample effected zone record:\n```text\nno-service 86400 IN MX 0 .\n```\n\nPrior to 0.16.0 the additional record processing was not supported by trust-dns-server. There\nAre no known issues with upgrading from 0.16 or 0.17 to 0.18.1. The remidy should be to upgrade to\n0.18.1. If unable to do so, MX, SRV or other record types with a target to the null type, should be avoided.",
   "affects": {
     "ranges": [

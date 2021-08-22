@@ -1,6 +1,6 @@
 {
   "id": "RUSTSEC-2018-0004",
-  "modified": "2021-06-04T21:26:23+00:00",
+  "modified": "2021-08-22T01:18:11+00:00",
   "published": "2018-08-25T12:00:00+00:00",
   "aliases": [
     "CVE-2018-20992"
@@ -12,7 +12,7 @@
     "purl": "pkg:cargo/claxon"
   },
   "summary": "Malicious input could cause uninitialized memory to be exposed",
-  "details": "Affected versions of Claxon made an invalid assumption about the decode buffer\nsize being a multiple of a value read from the bitstream. This could cause parts\nof the decode buffer to not be overwritten. If the decode buffer was newly\nallocated and uninitialized, this uninitialized memory could be exposed.\n\nThis allows an attacker to observe parts of the uninitialized memory in the\ndecoded audio stream.\n\nThe flaw was corrected by checking that the value read from the bistream divides\nthe decode buffer size, and returning a format error if it does not. If an error\nis returned, the decode buffer is not exposed. Regression tests and an\nadditional fuzzer have been added to prevent similar flaws in the future.",
+  "details": "Affected versions of Claxon made an invalid assumption about the decode buffer\nsize being a multiple of a value read from the bitstream. This could cause parts\nof the decode buffer to not be overwritten. If the decode buffer was newly\nallocated and uninitialized, this uninitialized memory could be exposed.\n\nThis allows an attacker to observe parts of the uninitialized memory in the\ndecoded audio stream.\n\nThe flaw was corrected by checking that the value read from the bitstream divides\nthe decode buffer size, and returning a format error if it does not. If an error\nis returned, the decode buffer is not exposed. Regression tests and an\nadditional fuzzer have been added to prevent similar flaws in the future.",
   "affects": {
     "ranges": [
       {

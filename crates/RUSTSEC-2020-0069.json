@@ -1,6 +1,6 @@
 {
   "id": "RUSTSEC-2020-0069",
-  "modified": "2020-11-11T18:27:32+00:00",
+  "modified": "2021-08-22T01:18:11+00:00",
   "published": "2020-11-11T12:00:00+00:00",
   "aliases": [
     "CVE-2020-28247"
@@ -12,7 +12,7 @@
     "purl": "pkg:cargo/lettre"
   },
   "summary": "Argument injection in sendmail transport",
-  "details": "Affected versions of lettre allowed argument injection\nto the sendmail command. It was possible, using forged `to` addresses,\nto pass arbitrary arguments to the sendmail executable.\n\nDepending on the implementation (original sendmail, postfix, exim, etc.)\nit could be possible in some cases to write email data into abritrary files (using sendmail's\nlogging features).\n \nThe flaw is corrected by modifying the executed command to stop parsing arguments\nbefore passing the destination addresses.\n\nNOTE: This vulnerability only affects the `sendmail` transport. Others, including `smtp`, are not\naffected.\n\nThis vulnerability was reported by vin01.",
+  "details": "Affected versions of lettre allowed argument injection\nto the sendmail command. It was possible, using forged `to` addresses,\nto pass arbitrary arguments to the sendmail executable.\n\nDepending on the implementation (original sendmail, postfix, exim, etc.)\nit could be possible in some cases to write email data into arbitrary files (using sendmail's\nlogging features).\n \nThe flaw is corrected by modifying the executed command to stop parsing arguments\nbefore passing the destination addresses.\n\nNOTE: This vulnerability only affects the `sendmail` transport. Others, including `smtp`, are not\naffected.\n\nThis vulnerability was reported by vin01.",
   "affects": {
     "ranges": [
       {
