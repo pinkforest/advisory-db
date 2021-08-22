@@ -1,6 +1,6 @@
 {
   "id": "RUSTSEC-2021-0089",
-  "modified": "2021-08-22T01:36:17+00:00",
+  "modified": "2021-08-22T09:43:52+00:00",
   "published": "2021-01-20T12:00:00+00:00",
   "aliases": [],
   "related": [],
@@ -10,12 +10,13 @@
     "purl": "pkg:cargo/raw-cpuid"
   },
   "summary": "Optional `Deserialize` implementations lacking validation",
-  "details": "When activating the non-default feature `serialize`, most structs implement\n`serde::Deserialize` without sufficient validation. This allows breaking\ninvariants in safe code, leading to:\n\n* Undefined behavior in `as_string()` methods (which use\n  `std::str::from_utf8_unchecked()` internally).\n* Panics due to failed assertions.\n\nSee https://github.com/gz/rust-cpuid/issues/43.\n\nA fix is not yet available, but most use cases do not require enabling\nthe `serialize` feature.",
+  "details": "When activating the non-default feature `serialize`, most structs implement\n`serde::Deserialize` without sufficient validation. This allows breaking\ninvariants in safe code, leading to:\n\n* Undefined behavior in `as_string()` methods (which use\n  `std::str::from_utf8_unchecked()` internally).\n* Panics due to failed assertions.\n\nSee https://github.com/gz/rust-cpuid/issues/43.",
   "affects": {
     "ranges": [
       {
         "type": "SEMVER",
-        "introduced": "3.1.1-0"
+        "introduced": "3.1.1-0",
+        "fixed": "9.1.1"
       }
     ]
   },
