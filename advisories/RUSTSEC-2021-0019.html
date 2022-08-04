@@ -41,7 +41,6 @@
 <main class="advisory">
   <article>
     
-    
         <span class="floating-menu">
           <a href="https://github.com/RustSec/advisory-db/commits/main/crates/xcb/RUSTSEC-2021-0019.md">History</a> ⋅ 
           <a href="https://github.com/RustSec/advisory-db/edit/main/crates/xcb/RUSTSEC-2021-0019.md">Edit</a>
@@ -51,7 +50,6 @@
     <header>
       <h1>
         
-        
         RUSTSEC-2021-0019
         
       </h1>
@@ -59,7 +57,6 @@
 </span>
     </header>
 
-    
     
 
     <dl>
@@ -74,7 +71,6 @@
       <dd>
         
         
-        
         <a href="/packages/xcb.html">xcb</a>
           (<a href="https://crates.io/crates/xcb">crates.io</a>)
         
@@ -83,7 +79,6 @@
 
       <dt id="type">Type</dt>
       <dd>
-        
         
         Vulnerability
         
@@ -103,7 +98,6 @@
       
 
       
-      
 
       
       <dt id="aliases">Aliases</dt>
@@ -112,29 +106,25 @@
           
           <li>
             
-            
-            <a href="https:&#x2f;&#x2f;cve.mitre.org&#x2f;cgi-bin&#x2f;cvename.cgi?name=CVE-2021-26955">CVE-2021-26955</a>
-            
-          </li>
-          
-          <li>
-            
-            
-            <a href="https:&#x2f;&#x2f;cve.mitre.org&#x2f;cgi-bin&#x2f;cvename.cgi?name=CVE-2021-26956">CVE-2021-26956</a>
+            <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-26955">CVE-2021-26955</a>
             
           </li>
           
           <li>
             
-            
-            <a href="https:&#x2f;&#x2f;cve.mitre.org&#x2f;cgi-bin&#x2f;cvename.cgi?name=CVE-2021-26957">CVE-2021-26957</a>
+            <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-26956">CVE-2021-26956</a>
             
           </li>
           
           <li>
             
+            <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-26957">CVE-2021-26957</a>
             
-            <a href="https:&#x2f;&#x2f;cve.mitre.org&#x2f;cgi-bin&#x2f;cvename.cgi?name=CVE-2021-26958">CVE-2021-26958</a>
+          </li>
+          
+          <li>
+            
+            <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-26958">CVE-2021-26958</a>
             
           </li>
           
@@ -145,13 +135,10 @@
       
       <dt id="details">Details</dt>
       <dd>
-        <a href="https:&#x2f;&#x2f;github.com&#x2f;RustSec&#x2f;advisory-db&#x2f;issues&#x2f;653">
-          https:&#x2f;&#x2f;github.com&#x2f;RustSec&#x2f;advisory-db&#x2f;issues&#x2f;653
+        <a href="https://github.com/RustSec/advisory-db/issues/653">
+          https://github.com/RustSec/advisory-db/issues/653
         </a>
       </dd>
-      
-
-      
       
 
       
@@ -162,22 +149,19 @@
       <dt id="patched">Patched</dt>
       <dd>
         
-        no patched versions
+        <ul>
+          
+          <li><code>&gt;=1.0</code></li>
+          
+        </ul>
         
       </dd>
 
       
-      
 
-      
-      
-
-      
       
       
     </dl>
-
-    
 
     
     
@@ -189,14 +173,14 @@
 X11 server without any validity checks. The X11 server only prevents interior
 null bytes, but otherwise allows any X11 client to create an atom for arbitrary
 bytes.</p>
-<p>This issue is tracked here: https://github.com/rtbo/rust-xcb/issues/96</p>
+<p>This issue is tracked here: https://github.com/rust-x-bindings/rust-xcb/issues/96</p>
 <h2><code>xcb::xproto::GetPropertyReply::value()</code> allows arbitrary return types</h2>
 <p>The function <code>xcb::xproto::GetPropertyReply::value()</code> returns a slice of type
 <code>T</code> where <code>T</code> is an unconstrained type parameter. The raw bytes received from
 the X11 server are interpreted as the requested type.</p>
 <p>The users of the <code>xcb</code> crate are advised to only call this function with the
 intended types. These are <code>u8</code>, <code>u16</code>, and <code>u32</code>.</p>
-<p>This issue is tracked here: https://github.com/rtbo/rust-xcb/issues/95</p>
+<p>This issue is tracked here: https://github.com/rust-x-bindings/rust-xcb/issues/95</p>
 <h2>Out of bounds read in <code>xcb::xproto::change_property()</code></h2>
 <p><code>xcb::xproto::change_property</code> has (among others) the arguments <code>format: u8</code> and
 <code>data: &amp;[T]</code>. The intended use is one of the following cases:</p>
@@ -210,7 +194,7 @@ end of the <code>data</code> slice is performed and the bytes are sent to the X1
 </ul>
 <p>The users of the <code>xcb</code> crate are advised to only call this function with one of
 the intended argument combinations.</p>
-<p>This issue is tracked here: https://github.com/rtbo/rust-xcb/issues/94</p>
+<p>This issue is tracked here: https://github.com/rust-x-bindings/rust-xcb/issues/94</p>
 <h2>'Safe' wrapper around <code>std::mem::transmute()</code></h2>
 <p>The function <code>xcb::base::cast_event()</code> takes a reference to a
 <code>xcb::base::GenericEvent</code> and returns a reference to an arbitrary type, as
@@ -221,7 +205,7 @@ is larger than the X11 event that was passed in.</p>
 <p>X11 events are mostly always 32 bytes large and this function works as intended.</p>
 <p>Users are advised to only cast to the event structs provided by the <code>xcb</code> crate
 (and hope for the best).</p>
-<p>This issue is tracked here: https://github.com/rtbo/rust-xcb/issues/78</p>
+<p>This issue is tracked here: https://github.com/rust-x-bindings/rust-xcb/issues/78</p>
 
   </article>
 </main>
