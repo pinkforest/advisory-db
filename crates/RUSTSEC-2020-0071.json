@@ -1,7 +1,7 @@
 {
   "id": "RUSTSEC-2020-0071",
-  "modified": "2021-10-19T22:13:58+00:00",
-  "published": "2020-11-18T12:00:00+00:00",
+  "modified": "2022-06-02T14:37:44Z",
+  "published": "2020-11-18T12:00:00Z",
   "aliases": [
     "CVE-2020-26235"
   ],
@@ -20,14 +20,13 @@
           "arch": [],
           "os": [
             "linux",
-            "unknown",
-            "unknown",
+            "redox",
+            "solaris",
             "android",
             "ios",
             "macos",
             "netbsd",
             "openbsd",
-            "bitrig",
             "freebsd"
           ],
           "functions": [
