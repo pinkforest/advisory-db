@@ -5,7 +5,7 @@
 
 <meta name="author" content="Rust Project Developers">
 <meta name="description" content="Security advisory database for Rust crates published through https://crates.io">
-<title>Advisories with keyword &#x27;layout&#x27; › RustSec Advisory Database</title>
+<title>RUSTSEC-2022-0051: lz4-sys: Memory corruption in liblz4 › RustSec Advisory Database</title>
 
 <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic" rel="stylesheet">
 <link href="/css/basic.css" rel="stylesheet">
@@ -38,155 +38,175 @@
   </nav>
 </header>
 
-<main class="advisories">
+<main class="advisory">
   <article>
+    
+        <span class="floating-menu">
+          <a href="https://github.com/RustSec/advisory-db/commits/main/crates/lz4-sys/RUSTSEC-2022-0051.md">History</a> ⋅ 
+          <a href="https://github.com/RustSec/advisory-db/edit/main/crates/lz4-sys/RUSTSEC-2022-0051.md">Edit</a>
+        </span>
+    
 
     <header>
-      <span class="floating-menu">
-  <a href="/categories/">Categories</a> ⋅
-  <a href="/keywords/">Keywords</a> ⋅
-  <a href="/packages/">Packages</a>
+      <h1>
+        
+        RUSTSEC-2022-0051
+        
+      </h1>
+      <span class="subtitle"><p>Memory corruption in liblz4</p>
 </span>
-      <h1>Advisories with keyword &#x27;layout&#x27;</h1>
     </header>
 
-    <ul>
-      
-      <li>
-  <time datetime="2022-08-26">
-    August 26, 2022
-  </time>
-
-  
-  <h3>
     
+
+    <dl>
+      <dt id="issued">Issued</dt>
+      <dd>
+        <time datetime="2022-08-25">
+          August 25, 2022
+        </time>
+      </dd>
+
+      <dt id="package">Package</dt>
+      <dd>
         
-          <span class="tag info">INFO</span>
         
-    
-    <a href="/advisories/RUSTSEC-2022-0052.html">
-      RUSTSEC-2022-0052: Unsoundness in os_socketaddr
-    </a>
-  </h3>
-  <span><p><code>os_socketaddr</code> invalidly assumes the memory layout of std::net::SocketAddr</p>
-</span>
-  
-</li>
-      
-      <li>
-  <time datetime="2021-03-04">
-    March  4, 2021
-  </time>
+        <a href="/packages/lz4-sys.html">lz4-sys</a>
+          (<a href="https://crates.io/crates/lz4-sys">crates.io</a>)
+        
+        
+      </dd>
 
-  
-  <h3>
-    
-      <span class="tag high">HIGH</span>
-      
-    <a href="/advisories/RUSTSEC-2021-0035.html">
-      RUSTSEC-2021-0035: Unsoundness in quinn
-    </a>
-  </h3>
-  <span><p><code>quinn</code> invalidly assumes the memory layout of std::net::SocketAddr</p>
-</span>
-  
-</li>
-      
-      <li>
-  <time datetime="2021-02-14">
-    February 14, 2021
-  </time>
+      <dt id="type">Type</dt>
+      <dd>
+        
+        Vulnerability
+        
+      </dd>
 
-  
-  <h3>
-    
-      <span class="tag critical">CRITICAL</span>
       
-    <a href="/advisories/RUSTSEC-2021-0021.html">
-      RUSTSEC-2021-0021: Unsoundness in nb-connect
-    </a>
-  </h3>
-  <span><p><code>nb-connect</code> invalidly assumes the memory layout of std::net::SocketAddr</p>
-</span>
-  
-</li>
+      <dt id="categories">Categories</dt>
+      <dd>
+        <ul>
+          
+          <li><a href="/categories/memory-corruption.html">memory-corruption</a></li>
+          
+        </ul>
+      </dd>
       
-      <li>
-  <time datetime="2020-11-13">
-    November 13, 2020
-  </time>
 
-  
-  <h3>
-    
-      <span class="tag medium">MEDIUM</span>
       
-    <a href="/advisories/RUSTSEC-2020-0080.html">
-      RUSTSEC-2020-0080: Unsoundness in miow
-    </a>
-  </h3>
-  <span><p><code>miow</code> invalidly assumes the memory layout of std::net::SocketAddr</p>
-</span>
-  
-</li>
+      <dt id="keywords">Keywords</dt>
+      <dd>
+        
+          <a href="/keywords/integer-overflow.html">#integer-overflow</a>
+        
+          <a href="/keywords/out-of-bounds.html">#out-of-bounds</a>
+        
+      </dd>
       
-      <li>
-  <time datetime="2020-11-07">
-    November  7, 2020
-  </time>
 
-  
-  <h3>
-    
-      <span class="tag medium">MEDIUM</span>
       
-    <a href="/advisories/RUSTSEC-2020-0078.html">
-      RUSTSEC-2020-0078: Unsoundness in net2
-    </a>
-  </h3>
-  <span><p><code>net2</code> invalidly assumes the memory layout of std::net::SocketAddr</p>
-</span>
-  
-</li>
-      
-      <li>
-  <time datetime="2020-11-06">
-    November  6, 2020
-  </time>
 
-  
-  <h3>
-    
-      <span class="tag medium">MEDIUM</span>
       
-    <a href="/advisories/RUSTSEC-2020-0079.html">
-      RUSTSEC-2020-0079: Unsoundness in socket2
-    </a>
-  </h3>
-  <span><p><code>socket2</code> invalidly assumes the memory layout of std::net::SocketAddr</p>
-</span>
-  
-</li>
+      <dt id="details">Details</dt>
+      <dd>
+        <a href="https://github.com/lz4/lz4/pull/972">
+          https://github.com/lz4/lz4/pull/972
+        </a>
+      </dd>
       
-      <li>
-  <time datetime="2020-11-02">
-    November  2, 2020
-  </time>
 
-  
-  <h3>
+      
+      <dt id="related">Related</dt>
+      <dd>
+        <ul>
+          
+          <li>
+            
+            <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3520">CVE-2021-3520</a>
+            
+          </li>
+          
+        </ul>
+      </dd>
+      
+
+      
+      <dt id="cvss_score">CVSS Score</dt>
+      <dd>9.8 <span class="tag critical">
+        CRITICAL
+      </span></dd>
+
+      <dt id="cvss_details">CVSS Details</dt>
+      <dd>
+        <dl>
+          
+          <dt>Attack vector</dt><dd>Network</dd>
+          
+
+          
+          <dt>Attack complexity</dt><dd>Low</d>
+          
+
+          
+          <dt>Privileges required</dt><dd>None</dd>
+          
+
+          
+          <dt>User interaction</dt><dd>None</dd>
+          
+
+          
+          <dt>Scope</dt><dd>Unchanged</dd>
+          
+
+          
+          <dt>Confidentiality</dt><dd>High</dd>
+          
+
+          
+          <dt>Integrity</dt><dd>High</dd>
+          
+
+          
+          <dt>Availability</dt><dd>High</dd>
+          
+        </dl>
+      </dd>
+
+      <dt id="cvss">CVSS Vector</dt>
+      <dd><a href="https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H">CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</a></dd>
+
+      
+
+      <dt id="patched">Patched</dt>
+      <dd>
+        
+        <ul>
+          
+          <li><code>&gt;=1.9.4</code></li>
+          
+        </ul>
+        
+      </dd>
+
+      
+
+      
+      
+    </dl>
+
     
-      <span class="tag medium">MEDIUM</span>
-      
-    <a href="/advisories/RUSTSEC-2020-0081.html">
-      RUSTSEC-2020-0081: Unsoundness in mio
-    </a>
-  </h3>
-  <span><p><code>mio</code> invalidly assumes the memory layout of std::net::SocketAddr</p>
-</span>
-  
-</li>
-      
-    </ul>
+    
+
+    <h3 id="description">Description</h3>
+    <p>lz4-sys up to v1.9.3 bundles a version of liblz4 that is vulnerable to
+<a href="https://nvd.nist.gov/vuln/detail/CVE-2021-3520">CVE-2021-3520</a>.</p>
+<p>Attackers could craft a payload that triggers an integer overflow upon
+decompression, causing an out-of-bounds write.</p>
+<p>The flaw has been corrected in version v1.9.4 of liblz4, which is included
+in lz4-sys 1.9.4.</p>
+
   </article>
 </main>

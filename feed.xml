@@ -1,5 +1,381 @@
 <?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>RustSec Advisories</title><id>https://rustsec.org/feed.xml</id><updated>2022-08-15T00:00:00+00:00</updated><author><name>RustSec</name></author><icon>https://rustsec.org/favicon.ico</icon><link href="https://rustsec.org/feed.xml" rel="self" type="application/atom+xml"/><link href="https://rustsec.org/" rel="alternate" type="text/html"/><subtitle xml:lang="en">Security advisories filed against Rust crates</subtitle><entry><title>RUSTSEC-2022-0049: Unsoundness in iana-time-zone</title><id>https://rustsec.org/advisories/RUSTSEC-2022-0049.html</id><updated>2022-08-15T00:00:00+00:00</updated><category term="memory-exposure"/><link href="https://rustsec.org/advisories/RUSTSEC-2022-0049.html" rel="alternate" type="text/html" title="RUSTSEC-2022-0049: Unsoundness in iana-time-zone"/><published>2022-08-15T00:00:00+00:00</published><summary xml:lang="en">Use after free in MacOS / iOS implementation</summary><content xml:lang="en" type="html">  &lt;article&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>RustSec Advisories</title><id>https://rustsec.org/feed.xml</id><updated>2022-08-26T00:00:00+00:00</updated><author><name>RustSec</name></author><icon>https://rustsec.org/favicon.ico</icon><link href="https://rustsec.org/feed.xml" rel="self" type="application/atom+xml"/><link href="https://rustsec.org/" rel="alternate" type="text/html"/><subtitle xml:lang="en">Security advisories filed against Rust crates</subtitle><entry><title>RUSTSEC-2022-0052: Unsoundness in os_socketaddr</title><id>https://rustsec.org/advisories/RUSTSEC-2022-0052.html</id><updated>2022-08-26T00:00:00+00:00</updated><category term="memory-corruption"/><link href="https://rustsec.org/advisories/RUSTSEC-2022-0052.html" rel="alternate" type="text/html" title="RUSTSEC-2022-0052: Unsoundness in os_socketaddr"/><published>2022-08-26T00:00:00+00:00</published><summary xml:lang="en">`os_socketaddr` invalidly assumes the memory layout of std::net::SocketAddr</summary><content xml:lang="en" type="html">  &lt;article&gt;
+    
+        &lt;span class=&quot;floating-menu&quot;&gt;
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/os_socketaddr/RUSTSEC-2022-0052.md&quot;&gt;History&lt;/a&gt; ⋅ 
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/os_socketaddr/RUSTSEC-2022-0052.md&quot;&gt;Edit&lt;/a&gt;
+        &lt;/span&gt;
+    
+
+    &lt;header&gt;
+      &lt;h1&gt;
+        
+        RUSTSEC-2022-0052
+        
+      &lt;/h1&gt;
+      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;&lt;code&gt;os_socketaddr&lt;/code&gt; invalidly assumes the memory layout of std::net::SocketAddr&lt;/p&gt;
+&lt;/span&gt;
+    &lt;/header&gt;
+
+    
+
+    &lt;dl&gt;
+      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2022-08-26&quot;&gt;
+          August 26, 2022
+        &lt;/time&gt;
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        
+        &lt;a href=&quot;/packages/os_socketaddr.html&quot;&gt;os_socketaddr&lt;/a&gt;
+          (&lt;a href=&quot;https://crates.io/crates/os_socketaddr&quot;&gt;crates.io&lt;/a&gt;)
+        
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
+        Unsound
+        
+      &lt;/dd&gt;
+
+      
+      &lt;dt id=&quot;categories&quot;&gt;Categories&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;ul&gt;
+          
+          &lt;li&gt;&lt;a href=&quot;/categories/memory-corruption.html&quot;&gt;memory-corruption&lt;/a&gt;&lt;/li&gt;
+          
+        &lt;/ul&gt;
+      &lt;/dd&gt;
+      
+
+      
+      &lt;dt id=&quot;keywords&quot;&gt;Keywords&lt;/dt&gt;
+      &lt;dd&gt;
+        
+          &lt;a href=&quot;/keywords/memory.html&quot;&gt;#memory&lt;/a&gt;
+        
+          &lt;a href=&quot;/keywords/layout.html&quot;&gt;#layout&lt;/a&gt;
+        
+          &lt;a href=&quot;/keywords/cast.html&quot;&gt;#cast&lt;/a&gt;
+        
+      &lt;/dd&gt;
+      
+
+      
+
+      
+      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;a href=&quot;https://github.com/a-ba/os_socketaddr/issues/3&quot;&gt;
+          https://github.com/a-ba/os_socketaddr/issues/3
+        &lt;/a&gt;
+      &lt;/dd&gt;
+      
+
+      
+
+      
+      
+
+      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        &lt;ul&gt;
+          
+          &lt;li&gt;&lt;code&gt;&amp;gt;=0.2.2&lt;/code&gt;&lt;/li&gt;
+          
+        &lt;/ul&gt;
+        
+      &lt;/dd&gt;
+
+      
+
+      
+      
+    &lt;/dl&gt;
+
+    
+    
+
+    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+    &lt;p&gt;The &lt;a href=&quot;https://crates.io/crates/os_socketaddr&quot;&gt;&lt;code&gt;os_socketaddr&lt;/code&gt;&lt;/a&gt; crate has assumed
+&lt;code&gt;std::net::SocketAddrV4&lt;/code&gt; and &lt;code&gt;std::net::SocketAddrV6&lt;/code&gt; have the same memory layout as the system C
+representation &lt;code&gt;sockaddr&lt;/code&gt;. It has simply casted the pointers to convert the socket addresses to the
+system representation.&lt;/p&gt;
+&lt;p&gt;These layout were &lt;a href=&quot;https://github.com/rust-lang/rust/pull/78802&quot;&gt;changed into idiomatic rust types&lt;/a&gt;
+in nightly &lt;code&gt;std&lt;/code&gt;. Starting from rustc 1.64 the affected versions of this crate will have undefined
+behaviour.&lt;/p&gt;
+
+  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2022-0051: Vulnerability in lz4-sys</title><id>https://rustsec.org/advisories/RUSTSEC-2022-0051.html</id><updated>2022-08-25T00:00:00+00:00</updated><category term="memory-corruption"/><link href="https://rustsec.org/advisories/RUSTSEC-2022-0051.html" rel="alternate" type="text/html" title="RUSTSEC-2022-0051: Vulnerability in lz4-sys"/><published>2022-08-25T00:00:00+00:00</published><summary xml:lang="en">Memory corruption in liblz4</summary><content xml:lang="en" type="html">  &lt;article&gt;
+    
+        &lt;span class=&quot;floating-menu&quot;&gt;
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/lz4-sys/RUSTSEC-2022-0051.md&quot;&gt;History&lt;/a&gt; ⋅ 
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/lz4-sys/RUSTSEC-2022-0051.md&quot;&gt;Edit&lt;/a&gt;
+        &lt;/span&gt;
+    
+
+    &lt;header&gt;
+      &lt;h1&gt;
+        
+        RUSTSEC-2022-0051
+        
+      &lt;/h1&gt;
+      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;Memory corruption in liblz4&lt;/p&gt;
+&lt;/span&gt;
+    &lt;/header&gt;
+
+    
+
+    &lt;dl&gt;
+      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2022-08-25&quot;&gt;
+          August 25, 2022
+        &lt;/time&gt;
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        
+        &lt;a href=&quot;/packages/lz4-sys.html&quot;&gt;lz4-sys&lt;/a&gt;
+          (&lt;a href=&quot;https://crates.io/crates/lz4-sys&quot;&gt;crates.io&lt;/a&gt;)
+        
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        Vulnerability
+        
+      &lt;/dd&gt;
+
+      
+      &lt;dt id=&quot;categories&quot;&gt;Categories&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;ul&gt;
+          
+          &lt;li&gt;&lt;a href=&quot;/categories/memory-corruption.html&quot;&gt;memory-corruption&lt;/a&gt;&lt;/li&gt;
+          
+        &lt;/ul&gt;
+      &lt;/dd&gt;
+      
+
+      
+      &lt;dt id=&quot;keywords&quot;&gt;Keywords&lt;/dt&gt;
+      &lt;dd&gt;
+        
+          &lt;a href=&quot;/keywords/integer-overflow.html&quot;&gt;#integer-overflow&lt;/a&gt;
+        
+          &lt;a href=&quot;/keywords/out-of-bounds.html&quot;&gt;#out-of-bounds&lt;/a&gt;
+        
+      &lt;/dd&gt;
+      
+
+      
+
+      
+      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;a href=&quot;https://github.com/lz4/lz4/pull/972&quot;&gt;
+          https://github.com/lz4/lz4/pull/972
+        &lt;/a&gt;
+      &lt;/dd&gt;
+      
+
+      
+      &lt;dt id=&quot;related&quot;&gt;Related&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;ul&gt;
+          
+          &lt;li&gt;
+            
+            &lt;a href=&quot;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3520&quot;&gt;CVE-2021-3520&lt;/a&gt;
+            
+          &lt;/li&gt;
+          
+        &lt;/ul&gt;
+      &lt;/dd&gt;
+      
+
+      
+      &lt;dt id=&quot;cvss_score&quot;&gt;CVSS Score&lt;/dt&gt;
+      &lt;dd&gt;9.8 &lt;span class=&quot;tag critical&quot;&gt;
+        CRITICAL
+      &lt;/span&gt;&lt;/dd&gt;
+
+      &lt;dt id=&quot;cvss_details&quot;&gt;CVSS Details&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;dl&gt;
+          
+          &lt;dt&gt;Attack vector&lt;/dt&gt;&lt;dd&gt;Network&lt;/dd&gt;
+          
+
+          
+          &lt;dt&gt;Attack complexity&lt;/dt&gt;&lt;dd&gt;Low&lt;/d&gt;
+          
+
+          
+          &lt;dt&gt;Privileges required&lt;/dt&gt;&lt;dd&gt;None&lt;/dd&gt;
+          
+
+          
+          &lt;dt&gt;User interaction&lt;/dt&gt;&lt;dd&gt;None&lt;/dd&gt;
+          
+
+          
+          &lt;dt&gt;Scope&lt;/dt&gt;&lt;dd&gt;Unchanged&lt;/dd&gt;
+          
+
+          
+          &lt;dt&gt;Confidentiality&lt;/dt&gt;&lt;dd&gt;High&lt;/dd&gt;
+          
+
+          
+          &lt;dt&gt;Integrity&lt;/dt&gt;&lt;dd&gt;High&lt;/dd&gt;
+          
+
+          
+          &lt;dt&gt;Availability&lt;/dt&gt;&lt;dd&gt;High&lt;/dd&gt;
+          
+        &lt;/dl&gt;
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;cvss&quot;&gt;CVSS Vector&lt;/dt&gt;
+      &lt;dd&gt;&lt;a href=&quot;https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H&quot;&gt;CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H&lt;/a&gt;&lt;/dd&gt;
+
+      
+
+      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        &lt;ul&gt;
+          
+          &lt;li&gt;&lt;code&gt;&amp;gt;=1.9.4&lt;/code&gt;&lt;/li&gt;
+          
+        &lt;/ul&gt;
+        
+      &lt;/dd&gt;
+
+      
+
+      
+      
+    &lt;/dl&gt;
+
+    
+    
+
+    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+    &lt;p&gt;lz4-sys up to v1.9.3 bundles a version of liblz4 that is vulnerable to
+&lt;a href=&quot;https://nvd.nist.gov/vuln/detail/CVE-2021-3520&quot;&gt;CVE-2021-3520&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Attackers could craft a payload that triggers an integer overflow upon
+decompression, causing an out-of-bounds write.&lt;/p&gt;
+&lt;p&gt;The flaw has been corrected in version v1.9.4 of liblz4, which is included
+in lz4-sys 1.9.4.&lt;/p&gt;
+
+  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2022-0053: mapr is unmaintained</title><id>https://rustsec.org/advisories/RUSTSEC-2022-0053.html</id><updated>2022-08-24T00:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2022-0053.html" rel="alternate" type="text/html" title="RUSTSEC-2022-0053: mapr is unmaintained"/><published>2022-08-24T00:00:00+00:00</published><summary xml:lang="en">mapr is Unmaintained</summary><content xml:lang="en" type="html">  &lt;article&gt;
+    
+        &lt;span class=&quot;floating-menu&quot;&gt;
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/mapr/RUSTSEC-2022-0053.md&quot;&gt;History&lt;/a&gt; ⋅ 
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/mapr/RUSTSEC-2022-0053.md&quot;&gt;Edit&lt;/a&gt;
+        &lt;/span&gt;
+    
+
+    &lt;header&gt;
+      &lt;h1&gt;
+        
+        RUSTSEC-2022-0053
+        
+      &lt;/h1&gt;
+      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;mapr is Unmaintained&lt;/p&gt;
+&lt;/span&gt;
+    &lt;/header&gt;
+
+    
+
+    &lt;dl&gt;
+      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2022-08-24&quot;&gt;
+          August 24, 2022
+        &lt;/time&gt;
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        
+        &lt;a href=&quot;/packages/mapr.html&quot;&gt;mapr&lt;/a&gt;
+          (&lt;a href=&quot;https://crates.io/crates/mapr&quot;&gt;crates.io&lt;/a&gt;)
+        
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
+        Unmaintained
+        
+      &lt;/dd&gt;
+
+      
+
+      
+
+      
+
+      
+      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;a href=&quot;https://github.com/rustsec/advisory-db/pull/1381&quot;&gt;
+          https://github.com/rustsec/advisory-db/pull/1381
+        &lt;/a&gt;
+      &lt;/dd&gt;
+      
+
+      
+
+      
+      
+
+      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        no patched versions
+        
+      &lt;/dd&gt;
+
+      
+
+      
+      
+    &lt;/dl&gt;
+
+    
+    
+
+    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+    &lt;p&gt;The &lt;code&gt;mapr&lt;/code&gt; fork has been merged back into upstream fork &lt;code&gt;memmap2&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The maintainer(s) have adviced &lt;code&gt;mapr&lt;/code&gt; is deprecated and will not
+receive any maintenance in favor of using &lt;code&gt;memmap2&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Possible Alternative(s)&lt;/h2&gt;
+&lt;p&gt;The below list has not been vetted in any way and may or may not contain alternatives;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/RazrFalcon/memmap2-rs&quot;&gt;&lt;code&gt;memmap2&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2022-0049: Unsoundness in iana-time-zone</title><id>https://rustsec.org/advisories/RUSTSEC-2022-0049.html</id><updated>2022-08-15T00:00:00+00:00</updated><category term="memory-exposure"/><link href="https://rustsec.org/advisories/RUSTSEC-2022-0049.html" rel="alternate" type="text/html" title="RUSTSEC-2022-0049: Unsoundness in iana-time-zone"/><published>2022-08-15T00:00:00+00:00</published><summary xml:lang="en">Use after free in MacOS / iOS implementation</summary><content xml:lang="en" type="html">  &lt;article&gt;
     
         &lt;span class=&quot;floating-menu&quot;&gt;
           &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/iana-time-zone/RUSTSEC-2022-0049.md&quot;&gt;History&lt;/a&gt; ⋅ 
@@ -921,353 +1297,5 @@ The SIKE and SIDH schemes will be removed from oqs 0.7.2.&lt;/p&gt;
 
     &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
     &lt;p&gt;Deeply nested fragments in a GraphQL request may cause a stack overflow in the server.&lt;/p&gt;
-
-  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2022-0032: Vulnerability in openssl-src</title><id>https://rustsec.org/advisories/RUSTSEC-2022-0032.html</id><updated>2022-07-05T00:00:00+00:00</updated><category term="crypto-failure"/><link href="https://rustsec.org/advisories/RUSTSEC-2022-0032.html" rel="alternate" type="text/html" title="RUSTSEC-2022-0032: Vulnerability in openssl-src"/><published>2022-07-05T00:00:00+00:00</published><summary xml:lang="en">AES OCB fails to encrypt some bytes</summary><content xml:lang="en" type="html">  &lt;article&gt;
-    
-        &lt;span class=&quot;floating-menu&quot;&gt;
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/openssl-src/RUSTSEC-2022-0032.md&quot;&gt;History&lt;/a&gt; ⋅ 
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/openssl-src/RUSTSEC-2022-0032.md&quot;&gt;Edit&lt;/a&gt;
-        &lt;/span&gt;
-    
-
-    &lt;header&gt;
-      &lt;h1&gt;
-        
-        RUSTSEC-2022-0032
-        
-      &lt;/h1&gt;
-      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;AES OCB fails to encrypt some bytes&lt;/p&gt;
-&lt;/span&gt;
-    &lt;/header&gt;
-
-    
-
-    &lt;dl&gt;
-      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2022-07-05&quot;&gt;
-          July  5, 2022
-        &lt;/time&gt;
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        
-        &lt;a href=&quot;/packages/openssl-src.html&quot;&gt;openssl-src&lt;/a&gt;
-          (&lt;a href=&quot;https://crates.io/crates/openssl-src&quot;&gt;crates.io&lt;/a&gt;)
-        
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        Vulnerability
-        
-      &lt;/dd&gt;
-
-      
-      &lt;dt id=&quot;categories&quot;&gt;Categories&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;a href=&quot;/categories/crypto-failure.html&quot;&gt;crypto-failure&lt;/a&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-      &lt;/dd&gt;
-      
-
-      
-
-      
-      &lt;dt id=&quot;aliases&quot;&gt;Aliases&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;ul&gt;
-          
-          &lt;li&gt;
-            
-            &lt;a href=&quot;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2097&quot;&gt;CVE-2022-2097&lt;/a&gt;
-            
-          &lt;/li&gt;
-          
-        &lt;/ul&gt;
-      &lt;/dd&gt;
-      
-
-      
-      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;a href=&quot;https://www.openssl.org/news/secadv/20220705.txt&quot;&gt;
-          https://www.openssl.org/news/secadv/20220705.txt
-        &lt;/a&gt;
-      &lt;/dd&gt;
-      
-
-      
-
-      
-      
-
-      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;code&gt;&amp;gt;=111.22, &amp;lt;300.0&lt;/code&gt;&lt;/li&gt;
-          
-          &lt;li&gt;&lt;code&gt;&amp;gt;=300.0.9&lt;/code&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-        
-      &lt;/dd&gt;
-
-      
-
-      
-      
-    &lt;/dl&gt;
-
-    
-    
-
-    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-    &lt;p&gt;AES OCB mode for 32-bit x86 platforms using the AES-NI assembly optimised
-implementation will not encrypt the entirety of the data under some
-circumstances.  This could reveal sixteen bytes of data that was
-preexisting in the memory that wasn&apos;t written.  In the special case of
-&amp;quot;in place&amp;quot; encryption, sixteen bytes of the plaintext would be revealed.&lt;/p&gt;
-&lt;p&gt;Since OpenSSL does not support OCB based cipher suites for TLS and DTLS,
-they are both unaffected.&lt;/p&gt;
-
-  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2022-0033: Vulnerability in openssl-src</title><id>https://rustsec.org/advisories/RUSTSEC-2022-0033.html</id><updated>2022-07-05T00:00:00+00:00</updated><category term="crypto-failure"/><link href="https://rustsec.org/advisories/RUSTSEC-2022-0033.html" rel="alternate" type="text/html" title="RUSTSEC-2022-0033: Vulnerability in openssl-src"/><published>2022-07-05T00:00:00+00:00</published><summary xml:lang="en">Heap memory corruption with RSA private key operation</summary><content xml:lang="en" type="html">  &lt;article&gt;
-    
-        &lt;span class=&quot;floating-menu&quot;&gt;
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/openssl-src/RUSTSEC-2022-0033.md&quot;&gt;History&lt;/a&gt; ⋅ 
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/openssl-src/RUSTSEC-2022-0033.md&quot;&gt;Edit&lt;/a&gt;
-        &lt;/span&gt;
-    
-
-    &lt;header&gt;
-      &lt;h1&gt;
-        
-        RUSTSEC-2022-0033
-        
-      &lt;/h1&gt;
-      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;Heap memory corruption with RSA private key operation&lt;/p&gt;
-&lt;/span&gt;
-    &lt;/header&gt;
-
-    
-
-    &lt;dl&gt;
-      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2022-07-05&quot;&gt;
-          July  5, 2022
-        &lt;/time&gt;
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        
-        &lt;a href=&quot;/packages/openssl-src.html&quot;&gt;openssl-src&lt;/a&gt;
-          (&lt;a href=&quot;https://crates.io/crates/openssl-src&quot;&gt;crates.io&lt;/a&gt;)
-        
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        Vulnerability
-        
-      &lt;/dd&gt;
-
-      
-      &lt;dt id=&quot;categories&quot;&gt;Categories&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;a href=&quot;/categories/crypto-failure.html&quot;&gt;crypto-failure&lt;/a&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-      &lt;/dd&gt;
-      
-
-      
-
-      
-      &lt;dt id=&quot;aliases&quot;&gt;Aliases&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;ul&gt;
-          
-          &lt;li&gt;
-            
-            &lt;a href=&quot;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2274&quot;&gt;CVE-2022-2274&lt;/a&gt;
-            
-          &lt;/li&gt;
-          
-        &lt;/ul&gt;
-      &lt;/dd&gt;
-      
-
-      
-      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;a href=&quot;https://www.openssl.org/news/secadv/20220705.txt&quot;&gt;
-          https://www.openssl.org/news/secadv/20220705.txt
-        &lt;/a&gt;
-      &lt;/dd&gt;
-      
-
-      
-
-      
-      
-
-      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;code&gt;&amp;gt;=300.0.9&lt;/code&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-        
-      &lt;/dd&gt;
-
-      
-      &lt;dt id=&quot;unaffected&quot;&gt;Unaffected&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;code&gt;&amp;lt;300.0.8&lt;/code&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-      &lt;/dd&gt;
-      
-
-      
-      
-    &lt;/dl&gt;
-
-    
-    
-
-    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-    &lt;p&gt;The OpenSSL 3.0.4 release introduced a serious bug in the RSA
-implementation for X86_64 CPUs supporting the AVX512IFMA instructions.
-This issue makes the RSA implementation with 2048 bit private keys
-incorrect on such machines and memory corruption will happen during
-the computation. As a consequence of the memory corruption an attacker
-may be able to trigger a remote code execution on the machine performing
-the computation.&lt;/p&gt;
-&lt;p&gt;SSL/TLS servers or other servers using 2048 bit RSA private keys running
-on machines supporting AVX512IFMA instructions of the X86_64 architecture
-are affected by this issue.&lt;/p&gt;
-&lt;p&gt;Note that on a vulnerable machine, proper testing of OpenSSL would fail and
-should be noticed before deployment.&lt;/p&gt;
-
-  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2022-0029: Vulnerability in crossbeam</title><id>https://rustsec.org/advisories/RUSTSEC-2022-0029.html</id><updated>2022-06-07T00:00:00+00:00</updated><category term="thread-safety"/><category term="memory-corruption"/><link href="https://rustsec.org/advisories/RUSTSEC-2022-0029.html" rel="alternate" type="text/html" title="RUSTSEC-2022-0029: Vulnerability in crossbeam"/><published>2022-06-07T00:00:00+00:00</published><summary xml:lang="en">`MsQueue` `push`/`pop` use the wrong orderings</summary><content xml:lang="en" type="html">  &lt;article&gt;
-    
-        &lt;span class=&quot;floating-menu&quot;&gt;
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/crossbeam/RUSTSEC-2022-0029.md&quot;&gt;History&lt;/a&gt; ⋅ 
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/crossbeam/RUSTSEC-2022-0029.md&quot;&gt;Edit&lt;/a&gt;
-        &lt;/span&gt;
-    
-
-    &lt;header&gt;
-      &lt;h1&gt;
-        
-        RUSTSEC-2022-0029
-        
-      &lt;/h1&gt;
-      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;&lt;code&gt;MsQueue&lt;/code&gt; &lt;code&gt;push&lt;/code&gt;/&lt;code&gt;pop&lt;/code&gt; use the wrong orderings&lt;/p&gt;
-&lt;/span&gt;
-    &lt;/header&gt;
-
-    
-
-    &lt;dl&gt;
-      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2022-06-07&quot;&gt;
-          June  7, 2022
-        &lt;/time&gt;
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        
-        &lt;a href=&quot;/packages/crossbeam.html&quot;&gt;crossbeam&lt;/a&gt;
-          (&lt;a href=&quot;https://crates.io/crates/crossbeam&quot;&gt;crates.io&lt;/a&gt;)
-        
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        Vulnerability
-        
-      &lt;/dd&gt;
-
-      
-      &lt;dt id=&quot;categories&quot;&gt;Categories&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;a href=&quot;/categories/thread-safety.html&quot;&gt;thread-safety&lt;/a&gt;&lt;/li&gt;
-          
-          &lt;li&gt;&lt;a href=&quot;/categories/memory-corruption.html&quot;&gt;memory-corruption&lt;/a&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-      &lt;/dd&gt;
-      
-
-      
-
-      
-
-      
-      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;a href=&quot;https://github.com/crossbeam-rs/crossbeam/pull/98&quot;&gt;
-          https://github.com/crossbeam-rs/crossbeam/pull/98
-        &lt;/a&gt;
-      &lt;/dd&gt;
-      
-
-      
-
-      
-      
-
-      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;code&gt;&amp;gt;=0.3.0&lt;/code&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-        
-      &lt;/dd&gt;
-
-      
-
-      
-      
-    &lt;/dl&gt;
-
-    
-    
-
-    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-    &lt;p&gt;Affected versions of this crate use orderings which are too weak to support this data structure.
-It is likely this has caused memory corruption in the wild: &lt;a href=&quot;https://github.com/crossbeam-rs/crossbeam/issues/97#issuecomment-412785919&quot;&gt;https://github.com/crossbeam-rs/crossbeam/issues/97#issuecomment-412785919&lt;/a&gt;.&lt;/p&gt;
 
   &lt;/article&gt;</content></entry></feed>
