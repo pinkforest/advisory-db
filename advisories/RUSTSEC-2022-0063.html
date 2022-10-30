@@ -5,7 +5,7 @@
 
 <meta name="author" content="Rust Project Developers">
 <meta name="description" content="Security advisory database for Rust crates published through https://crates.io">
-<title>Advisories for package &#x27;raw-cpuid&#x27; › RustSec Advisory Database</title>
+<title>RUSTSEC-2022-0063: linked_list_allocator: Multiple vulnerabilities resulting in out-of-bounds writes › RustSec Advisory Database</title>
 
 <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic" rel="stylesheet">
 <link href="/css/basic.css" rel="stylesheet">
@@ -49,58 +49,170 @@
   </nav>
 </header>
 
-<main class="advisories">
+<main class="advisory">
   <article>
+    
+        <span class="floating-menu">
+          <a href="https://github.com/RustSec/advisory-db/commits/main/crates/linked_list_allocator/RUSTSEC-2022-0063.md">History</a> ⋅ 
+          <a href="https://github.com/RustSec/advisory-db/edit/main/crates/linked_list_allocator/RUSTSEC-2022-0063.md">Edit</a>
+        </span>
+    
 
     <header>
-      <span class="floating-menu">
-  <a href="/categories/">Categories</a> ⋅
-  <a href="/keywords/">Keywords</a> ⋅
-  <a href="/packages/">Packages</a>
+      <h1>
+        
+        RUSTSEC-2022-0063
+        
+      </h1>
+      <span class="subtitle"><p>Multiple vulnerabilities resulting in out-of-bounds writes</p>
 </span>
-      <h1>Advisories for package &#x27;raw-cpuid&#x27;</h1>
     </header>
 
+    
+
+    <dl>
+      <dt id="issued">Issued</dt>
+      <dd>
+        <time datetime="2022-09-07">
+          September  7, 2022
+        </time>
+      </dd>
+
+      <dt id="package">Package</dt>
+      <dd>
+        
+        
+        <a href="/packages/linked_list_allocator.html">linked_list_allocator</a>
+          (<a href="https://crates.io/crates/linked_list_allocator">crates.io</a>)
+        
+        
+      </dd>
+
+      <dt id="type">Type</dt>
+      <dd>
+        
+        Vulnerability
+        
+      </dd>
+
+      
+      <dt id="categories">Categories</dt>
+      <dd>
+        <ul>
+          
+          <li><a href="/categories/memory-corruption.html">memory-corruption</a></li>
+          
+        </ul>
+      </dd>
+      
+
+      
+
+      
+      <dt id="aliases">Aliases</dt>
+      <dd>
+        <ul>
+          
+          <li>
+            
+            <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-36086">CVE-2022-36086</a>
+            
+          </li>
+          
+        </ul>
+      </dd>
+      
+
+      
+      <dt id="details">Details</dt>
+      <dd>
+        <a href="https://github.com/advisories/GHSA-xg8p-34w2-j49j">
+          https://github.com/advisories/GHSA-xg8p-34w2-j49j
+        </a>
+      </dd>
+      
+
+      
+
+      
+      <dt id="cvss_score">CVSS Score</dt>
+      <dd>8.4 <span class="tag high">
+        HIGH
+      </span></dd>
+
+      <dt id="cvss_details">CVSS Details</dt>
+      <dd>
+        <dl>
+          
+          <dt>Attack vector</dt><dd>Local</dd>
+          
+
+          
+          <dt>Attack complexity</dt><dd>Low</d>
+          
+
+          
+          <dt>Privileges required</dt><dd>None</dd>
+          
+
+          
+          <dt>User interaction</dt><dd>None</dd>
+          
+
+          
+          <dt>Scope</dt><dd>Unchanged</dd>
+          
+
+          
+          <dt>Confidentiality</dt><dd>High</dd>
+          
+
+          
+          <dt>Integrity</dt><dd>High</dd>
+          
+
+          
+          <dt>Availability</dt><dd>High</dd>
+          
+        </dl>
+      </dd>
+
+      <dt id="cvss">CVSS Vector</dt>
+      <dd><a href="https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H">CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</a></dd>
+
+      
+
+      <dt id="patched">Patched</dt>
+      <dd>
+        
+        <ul>
+          
+          <li><code>&gt;=0.10.2</code></li>
+          
+        </ul>
+        
+      </dd>
+
+      
+
+      
+      
+    </dl>
+
+    
+    
+
+    <h3 id="description">Description</h3>
     <ul>
-      
-      <li>
-  <time datetime="2021-01-20">
-    January 20, 2021
-  </time>
-
-  
-  <h3>
-    
-        
-    
-    <a href="/advisories/RUSTSEC-2021-0089.html">
-      RUSTSEC-2021-0089: Vulnerability in raw-cpuid
-    </a>
-  </h3>
-  <span><p>Optional <code>Deserialize</code> implementations lacking validation</p>
-</span>
-  
+<li>The heap initialization methods were missing a minimum size check for the given heap size argument. This could lead to <strong>out-of-bound writes</strong> when a heap was initialized with a size smaller than <code>3 * size_of::&lt;usize&gt;</code> because of metadata write operations.</li>
+<li>When calling <code>Heap::extend</code> with a size smaller than two <code>usize</code>s (e.g., 16 on <code>x86_64</code>), the size was erroneously rounded up to the minimum size, which could result in an <strong>out-of-bounds write</strong>.</li>
+<li>Calling <code>Heap::extend</code> on an empty heap tried to construct a heap starting at address 0, which is also an <strong>out-of-bounds write</strong>.
+<ul>
+<li>One specific way to trigger this accidentally is to call <code>Heap::new</code> (or a similar constructor) with a heap size that is smaller than two <code>usize</code>s. This was treated as an empty heap as well.</li>
+</ul>
 </li>
-      
-      <li>
-  <time datetime="2021-01-20">
-    January 20, 2021
-  </time>
+<li>Calling <code>Heap::extend</code> on a heap whose size is not a multiple of the size of two <code>usize</code>s resulted in unaligned writes. It also left the heap in an unexpected state, which might lead to subsequent issues. We did not find a way to exploit this undefined behavior yet (apart from DoS on platforms that fault on unaligned writes).</li>
+</ul>
 
-  
-  <h3>
-    
-        
-    
-    <a href="/advisories/RUSTSEC-2021-0013.html">
-      RUSTSEC-2021-0013: Vulnerability in raw-cpuid
-    </a>
-  </h3>
-  <span><p>Soundness issues in <code>raw-cpuid</code></p>
-</span>
-  
-</li>
-      
-    </ul>
   </article>
 </main>
