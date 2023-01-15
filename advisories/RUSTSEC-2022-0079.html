@@ -5,7 +5,7 @@
 
 <meta name="author" content="Rust Project Developers">
 <meta name="description" content="Security advisory database for Rust crates published through https://crates.io">
-<title>Advisories with keyword &#x27;mitm&#x27; › RustSec Advisory Database</title>
+<title>RUSTSEC-2022-0079: elf_rs: ELF header parsing library doesn&#x27;t check for valid offset › RustSec Advisory Database</title>
 
 <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic" rel="stylesheet">
 <link href="/css/basic.css" rel="stylesheet">
@@ -52,109 +52,140 @@
   </nav>
 </header>
 
-<main class="advisories">
+<main class="advisory">
   <article>
+    
+        <span class="floating-menu">
+          <a href="https://github.com/RustSec/advisory-db/commits/main/crates/elf_rs/RUSTSEC-2022-0079.md">History</a> ⋅ 
+          <a href="https://github.com/RustSec/advisory-db/edit/main/crates/elf_rs/RUSTSEC-2022-0079.md">Edit</a>
+        </span>
+    
 
     <header>
-      <span class="floating-menu">
-  <a href="/categories/">Categories</a> ⋅
-  <a href="/keywords/">Keywords</a> ⋅
-  <a href="/packages/">Packages</a>
+      <h1>
+        
+        RUSTSEC-2022-0079
+        
+      </h1>
+      <span class="subtitle"><p>ELF header parsing library doesn't check for valid offset</p>
 </span>
-      <h1>Advisories with keyword &#x27;mitm&#x27;</h1>
     </header>
 
-    <ul>
-      
-      <li>
-  <time datetime="2023-01-12">
-    January 12, 2023
-  </time>
-
-  
-  <h3><a class="withdrawn" href="/advisories/RUSTSEC-2023-0002.html">
-      RUSTSEC-2023-0002
-  </a></h3>
-  (withdrawn advisory)
-  
-</li>
-      
-      <li>
-  <time datetime="2020-10-02">
-    October  2, 2020
-  </time>
-
-  
-  <h3>
     
-      <span class="tag medium">MEDIUM</span>
-      
-    <a href="/advisories/RUSTSEC-2017-0003.html">
-      RUSTSEC-2017-0003: Vulnerability in security-framework
-    </a>
-  </h3>
-  <span><p>Hostname verification skipped when custom root certs used</p>
-</span>
-  
-</li>
-      
-      <li>
-  <time datetime="2020-10-02">
-    October  2, 2020
-  </time>
 
-  
-  <h3>
-    
-      <span class="tag medium">MEDIUM</span>
-      
-    <a href="/advisories/RUSTSEC-2016-0002.html">
-      RUSTSEC-2016-0002: Vulnerability in hyper
-    </a>
-  </h3>
-  <span><p>HTTPS MitM vulnerability due to lack of hostname verification</p>
-</span>
-  
-</li>
-      
-      <li>
-  <time datetime="2020-10-02">
-    October  2, 2020
-  </time>
+    <dl>
+      <dt id="reported">Reported</dt>
+      <dd>
+        <time datetime="2022-10-31">
+          October 31, 2022
+        </time>
+      </dd>
 
-  
-  <h3>
-    
-      <span class="tag high">HIGH</span>
-      
-    <a href="/advisories/RUSTSEC-2016-0001.html">
-      RUSTSEC-2016-0001: Vulnerability in openssl
-    </a>
-  </h3>
-  <span><p>SSL/TLS MitM vulnerability due to insecure defaults</p>
-</span>
-  
-</li>
-      
-      <li>
-  <time datetime="2020-10-02">
-    October  2, 2020
-  </time>
+      <dt id="issued">Issued</dt>
+      <dd>
+        <time datetime="2023-01-15">
+          January 15, 2023
+        </time>
+        
+      </dd>
 
-  
-  <h3>
+      <dt id="package">Package</dt>
+      <dd>
+        
+        
+        <a href="/packages/elf_rs.html">elf_rs</a>
+          (<a href="https://crates.io/crates/elf_rs">crates.io</a>)
+        
+        
+      </dd>
+
+      <dt id="type">Type</dt>
+      <dd>
+        
+        Vulnerability
+        
+      </dd>
+
+      
+      <dt id="categories">Categories</dt>
+      <dd>
+        <ul>
+          
+          <li><a href="/categories/memory-corruption.html">memory-corruption</a></li>
+          
+        </ul>
+      </dd>
+      
+
+      
+      <dt id="keywords">Keywords</dt>
+      <dd>
+        
+          <a href="/keywords/elf.html">#elf</a>
+        
+          <a href="/keywords/header.html">#header</a>
+        
+      </dd>
+      
+
+      
+
+      
+      <dt id="details">Details</dt>
+      <dd>
+        <a href="https://github.com/vincenthouyi/elf_rs/issues/11">
+          https://github.com/vincenthouyi/elf_rs/issues/11
+        </a>
+      </dd>
+      
+
+      
+
+      
+      
+
+      <dt id="patched">Patched</dt>
+      <dd>
+        
+        no patched versions
+        
+      </dd>
+
+      
+
+      
+      
+
+      
+      
+    </dl>
+
     
-      <span class="tag medium">MEDIUM</span>
-      
-    <a href="/advisories/RUSTSEC-2016-0003.html">
-      RUSTSEC-2016-0003: Vulnerability in portaudio
-    </a>
-  </h3>
-  <span><p>HTTP download and execution allows MitM RCE</p>
-</span>
-  
-</li>
-      
-    </ul>
+    
+
+    
+
+    <h3 id="description">Description</h3>
+    <p>The crate has several unsafe sections that don't perform proper pointer validation.</p>
+<p>An example can be found in the following function:</p>
+<pre><code>fn section_header_raw(&amp;self) -&gt; &amp;[ET::SectionHeader] {
+    let sh_off = self.elf_header().section_header_offset() as usize;
+    let sh_num = self.elf_header().section_header_entry_num() as usize;
+    unsafe {
+        let sh_ptr = self.content().as_ptr().add(sh_off);
+        from_raw_parts(sh_ptr as *const ET::SectionHeader, sh_num)
+    }
+}
+</code></pre>
+<p>While this will work perfectly fine <em>if</em> the ELF header is valid, malicious or
+malformed input can contain a section header offset of an arbitrary size, meaning
+that the resultant pointer in the unsafe block can point to an artibrary address
+in the address space of the process.</p>
+<p>This can result in unpredictable behaviour, and in our fuzz testing, we discovered
+that it's trivial to cause SIGABRT (signal 6), or SEGV (signal 11).</p>
+<p>The function should either be marked as unsafe, with a note that the caller is responsible
+for providing only valid inputs, or it should ideally do the due diligence to ensure that the
+offset doesn't exceed the bounds of the header (and add additional checks as necessary).</p>
+
   </article>
 </main>
