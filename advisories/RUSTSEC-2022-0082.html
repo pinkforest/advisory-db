@@ -5,7 +5,7 @@
 
 <meta name="author" content="Rust Project Developers">
 <meta name="description" content="Security advisory database for Rust crates published through https://crates.io">
-<title>Advisories for package &#x27;arrow&#x27; › RustSec Advisory Database</title>
+<title>RUSTSEC-2022-0082: warp: Improper validation of Windows paths could lead to directory traversal attack › RustSec Advisory Database</title>
 
 <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic" rel="stylesheet">
 <link href="/css/basic.css" rel="stylesheet">
@@ -52,77 +52,138 @@
   </nav>
 </header>
 
-<main class="advisories">
+<main class="advisory">
   <article>
+    
+        <span class="floating-menu">
+          <a href="https://github.com/RustSec/advisory-db/commits/main/crates/warp/RUSTSEC-2022-0082.md">History</a> ⋅ 
+          <a href="https://github.com/RustSec/advisory-db/edit/main/crates/warp/RUSTSEC-2022-0082.md">Edit</a>
+        </span>
+    
 
     <header>
-      <span class="floating-menu">
-  <a href="/categories/">Categories</a> ⋅
-  <a href="/keywords/">Keywords</a> ⋅
-  <a href="/packages/">Packages</a>
+      <h1>
+        
+        RUSTSEC-2022-0082
+        
+      </h1>
+      <span class="subtitle"><p>Improper validation of Windows paths could lead to directory traversal attack</p>
 </span>
-      <h1>Advisories for package &#x27;arrow&#x27;</h1>
     </header>
 
-    <ul>
-      
-      <li>
-  <time datetime="2021-09-29">
-    September 29, 2021
-  </time>
+    
 
-  
-  <h3>
-    
-        
-    
-    <a href="/advisories/RUSTSEC-2021-0118.html">
-      RUSTSEC-2021-0118: Vulnerability in arrow
-    </a>
-  </h3>
-  <span><p><code>FixedSizeBinaryArray</code> does not perform bound checks on accessing values and offsets</p>
-</span>
-  
-</li>
-      
-      <li>
-  <time datetime="2021-09-29">
-    September 29, 2021
-  </time>
+    <dl>
+      <dt id="reported">Reported</dt>
+      <dd>
+        <time datetime="2022-01-14">
+          January 14, 2022
+        </time>
+      </dd>
 
-  
-  <h3>
-    
+      <dt id="issued">Issued</dt>
+      <dd>
+        <time datetime="2023-01-28">
+          January 28, 2023
+        </time>
         
-    
-    <a href="/advisories/RUSTSEC-2021-0117.html">
-      RUSTSEC-2021-0117: Vulnerability in arrow
-    </a>
-  </h3>
-  <span><p><code>DecimalArray</code> does not perform bound checks on accessing values and offsets</p>
-</span>
-  
-</li>
-      
-      <li>
-  <time datetime="2021-09-29">
-    September 29, 2021
-  </time>
+      </dd>
 
-  
-  <h3>
-    
+      <dt id="package">Package</dt>
+      <dd>
         
-    
-    <a href="/advisories/RUSTSEC-2021-0116.html">
-      RUSTSEC-2021-0116: Vulnerability in arrow
-    </a>
-  </h3>
-  <span><p><code>BinaryArray</code> does not perform bound checks on reading values and offsets</p>
-</span>
-  
-</li>
+        
+        <a href="/packages/warp.html">warp</a>
+          (<a href="https://crates.io/crates/warp">crates.io</a>)
+        
+        
+      </dd>
+
+      <dt id="type">Type</dt>
+      <dd>
+        
+        Vulnerability
+        
+      </dd>
+
       
-    </ul>
+      <dt id="categories">Categories</dt>
+      <dd>
+        <ul>
+          
+          <li><a href="/categories/file-disclosure.html">file-disclosure</a></li>
+          
+        </ul>
+      </dd>
+      
+
+      
+      <dt id="keywords">Keywords</dt>
+      <dd>
+        
+          <a href="/keywords/directory-traversal.html">#directory-traversal</a>
+        
+          <a href="/keywords/http.html">#http</a>
+        
+      </dd>
+      
+
+      
+
+      
+      <dt id="details">Details</dt>
+      <dd>
+        <a href="https://github.com/seanmonstar/warp/issues/937">
+          https://github.com/seanmonstar/warp/issues/937
+        </a>
+      </dd>
+      
+
+      
+
+      
+      
+
+      <dt id="patched">Patched</dt>
+      <dd>
+        
+        <ul>
+          
+          <li><code>&gt;=0.3.3</code></li>
+          
+        </ul>
+        
+      </dd>
+
+      
+
+      
+      
+
+      
+      <dt>Affected OSes</dt>
+      <dd>
+        <ul>
+          
+          <li><code>windows</code></li>
+          
+        </ul>
+      </dd>
+      
+      
+    </dl>
+
+    
+    
+
+    
+
+    <h3 id="description">Description</h3>
+    <p>Path resolution in <code>warp::filters::fs::dir</code> didn't correctly validate Windows paths
+meaning paths like <code>/foo/bar/c:/windows/web/screen/img101.png</code> would be allowed
+and respond with the contents of <code>c:/windows/web/screen/img101.png</code>. Thus users
+could potentially read files anywhere on the filesystem.</p>
+<p>This only impacts Windows. Linux and other unix likes are not impacted by this.</p>
+
   </article>
 </main>
