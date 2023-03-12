@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>RustSec Advisories</title><id>https://rustsec.org/feed.xml</id><updated>2023-02-01T12:00:00+00:00</updated><author><name>RustSec</name></author><icon>https://rustsec.org/favicon.ico</icon><link href="https://rustsec.org/feed.xml" rel="self" type="application/atom+xml"/><link href="https://rustsec.org/" rel="alternate" type="text/html"/><subtitle xml:lang="en">Security advisories filed against Rust crates</subtitle><entry><title>RUSTSEC-2021-0147: daemonize is unmaintained</title><id>https://rustsec.org/advisories/RUSTSEC-2021-0147.html</id><updated>2023-02-01T12:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2021-0147.html" rel="alternate" type="text/html" title="RUSTSEC-2021-0147: daemonize is unmaintained"/><published>2023-02-01T12:00:00+00:00</published><summary xml:lang="en">`daemonize` is Unmaintained</summary><content xml:lang="en" type="html">  &lt;article&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>RustSec Advisories</title><id>https://rustsec.org/feed.xml</id><updated>2023-03-12T12:00:00+00:00</updated><author><name>RustSec</name></author><icon>https://rustsec.org/favicon.ico</icon><link href="https://rustsec.org/feed.xml" rel="self" type="application/atom+xml"/><link href="https://rustsec.org/" rel="alternate" type="text/html"/><subtitle xml:lang="en">Security advisories filed against Rust crates</subtitle><entry><title>RUSTSEC-2021-0152: Unsoundness in out-reference</title><id>https://rustsec.org/advisories/RUSTSEC-2021-0152.html</id><updated>2023-03-12T12:00:00+00:00</updated><category term="memory-corruption"/><link href="https://rustsec.org/advisories/RUSTSEC-2021-0152.html" rel="alternate" type="text/html" title="RUSTSEC-2021-0152: Unsoundness in out-reference"/><published>2023-03-12T12:00:00+00:00</published><summary xml:lang="en">`out_reference::Out::from_raw` should be `unsafe`</summary><content xml:lang="en" type="html">  &lt;article&gt;
     
         &lt;span class=&quot;floating-menu&quot;&gt;
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/daemonize/RUSTSEC-2021-0147.md&quot;&gt;History&lt;/a&gt; ⋅ 
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/daemonize/RUSTSEC-2021-0147.md&quot;&gt;Edit&lt;/a&gt;
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/out-reference/RUSTSEC-2021-0152.md&quot;&gt;History&lt;/a&gt; ⋅ 
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/out-reference/RUSTSEC-2021-0152.md&quot;&gt;Edit&lt;/a&gt;
         &lt;/span&gt;
     
 
     &lt;header&gt;
       &lt;h1&gt;
         
-        RUSTSEC-2021-0147
+        RUSTSEC-2021-0152
         
       &lt;/h1&gt;
-      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;&lt;code&gt;daemonize&lt;/code&gt; is Unmaintained&lt;/p&gt;
+      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;&lt;code&gt;out_reference::Out::from_raw&lt;/code&gt; should be &lt;code&gt;unsafe&lt;/code&gt;&lt;/p&gt;
 &lt;/span&gt;
     &lt;/header&gt;
 
@@ -22,15 +22,15 @@
     &lt;dl&gt;
       &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
       &lt;dd&gt;
-        &lt;time datetime=&quot;2021-09-01&quot;&gt;
-          September  1, 2021
+        &lt;time datetime=&quot;2021-01-20&quot;&gt;
+          January 20, 2021
         &lt;/time&gt;
       &lt;/dd&gt;
 
       &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
       &lt;dd&gt;
-        &lt;time datetime=&quot;2023-02-01&quot;&gt;
-          February  1, 2023
+        &lt;time datetime=&quot;2023-03-12&quot;&gt;
+          March 12, 2023
         &lt;/time&gt;
         
       &lt;/dd&gt;
@@ -39,830 +39,8 @@
       &lt;dd&gt;
         
         
-        &lt;a href=&quot;/packages/daemonize.html&quot;&gt;daemonize&lt;/a&gt;
-          (&lt;a href=&quot;https://crates.io/crates/daemonize&quot;&gt;crates.io&lt;/a&gt;)
-        
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
-        Unmaintained
-        
-      &lt;/dd&gt;
-
-      
-
-      
-
-      
-
-      
-      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;a href=&quot;https://github.com/knsd/daemonize/issues/46&quot;&gt;
-          https://github.com/knsd/daemonize/issues/46
-        &lt;/a&gt;
-      &lt;/dd&gt;
-      
-
-      
-
-      
-      
-
-      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        no patched versions
-        
-      &lt;/dd&gt;
-
-      
-
-      
-      
-    &lt;/dl&gt;
-
-    
-    
-
-    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-    &lt;p&gt;Last release was over four years ago.&lt;/p&gt;
-&lt;p&gt;The crate contains undocumented unsafe behind safe fns.&lt;/p&gt;
-&lt;p&gt;An &lt;a href=&quot;https://github.com/knsd/daemonize/issues/46&quot;&gt;issue&lt;/a&gt; inquiring as to possible updates has gone unanswered by the maintainer.&lt;/p&gt;
-&lt;h2&gt;Possible Alternatives&lt;/h2&gt;
-&lt;p&gt;The below list has not been vetted in any way and may or may not contain alternatives:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://crates.io/crates/daemonize-me&quot;&gt;daemonize-me&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://crates.io/crates/tetsy-daemonize&quot;&gt;tetsy-daemonize&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2022-0082: Vulnerability in warp</title><id>https://rustsec.org/advisories/RUSTSEC-2022-0082.html</id><updated>2023-01-28T12:00:00+00:00</updated><category term="file-disclosure"/><link href="https://rustsec.org/advisories/RUSTSEC-2022-0082.html" rel="alternate" type="text/html" title="RUSTSEC-2022-0082: Vulnerability in warp"/><published>2023-01-28T12:00:00+00:00</published><summary xml:lang="en">Improper validation of Windows paths could lead to directory traversal attack</summary><content xml:lang="en" type="html">  &lt;article&gt;
-    
-        &lt;span class=&quot;floating-menu&quot;&gt;
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/warp/RUSTSEC-2022-0082.md&quot;&gt;History&lt;/a&gt; ⋅ 
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/warp/RUSTSEC-2022-0082.md&quot;&gt;Edit&lt;/a&gt;
-        &lt;/span&gt;
-    
-
-    &lt;header&gt;
-      &lt;h1&gt;
-        
-        RUSTSEC-2022-0082
-        
-      &lt;/h1&gt;
-      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;Improper validation of Windows paths could lead to directory traversal attack&lt;/p&gt;
-&lt;/span&gt;
-    &lt;/header&gt;
-
-    
-
-    &lt;dl&gt;
-      &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2022-01-14&quot;&gt;
-          January 14, 2022
-        &lt;/time&gt;
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2023-01-28&quot;&gt;
-          January 28, 2023
-        &lt;/time&gt;
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        
-        &lt;a href=&quot;/packages/warp.html&quot;&gt;warp&lt;/a&gt;
-          (&lt;a href=&quot;https://crates.io/crates/warp&quot;&gt;crates.io&lt;/a&gt;)
-        
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        Vulnerability
-        
-      &lt;/dd&gt;
-
-      
-      &lt;dt id=&quot;categories&quot;&gt;Categories&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;a href=&quot;/categories/file-disclosure.html&quot;&gt;file-disclosure&lt;/a&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-      &lt;/dd&gt;
-      
-
-      
-      &lt;dt id=&quot;keywords&quot;&gt;Keywords&lt;/dt&gt;
-      &lt;dd&gt;
-        
-          &lt;a href=&quot;/keywords/directory-traversal.html&quot;&gt;#directory-traversal&lt;/a&gt;
-        
-          &lt;a href=&quot;/keywords/http.html&quot;&gt;#http&lt;/a&gt;
-        
-      &lt;/dd&gt;
-      
-
-      
-
-      
-      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;a href=&quot;https://github.com/seanmonstar/warp/issues/937&quot;&gt;
-          https://github.com/seanmonstar/warp/issues/937
-        &lt;/a&gt;
-      &lt;/dd&gt;
-      
-
-      
-
-      
-      
-
-      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;code&gt;&amp;gt;=0.3.3&lt;/code&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-        
-      &lt;/dd&gt;
-
-      
-
-      
-      
-
-      
-      &lt;dt&gt;Affected OSes&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;code&gt;windows&lt;/code&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-      &lt;/dd&gt;
-      
-      
-    &lt;/dl&gt;
-
-    
-    
-
-    
-
-    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-    &lt;p&gt;Path resolution in &lt;code&gt;warp::filters::fs::dir&lt;/code&gt; didn&apos;t correctly validate Windows paths
-meaning paths like &lt;code&gt;/foo/bar/c:/windows/web/screen/img101.png&lt;/code&gt; would be allowed
-and respond with the contents of &lt;code&gt;c:/windows/web/screen/img101.png&lt;/code&gt;. Thus users
-could potentially read files anywhere on the filesystem.&lt;/p&gt;
-&lt;p&gt;This only impacts Windows. Linux and other unix likes are not impacted by this.&lt;/p&gt;
-
-  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2023-0003: Vulnerability in libgit2-sys</title><id>https://rustsec.org/advisories/RUSTSEC-2023-0003.html</id><updated>2023-01-20T12:00:00+00:00</updated><category term="crypto-failure"/><link href="https://rustsec.org/advisories/RUSTSEC-2023-0003.html" rel="alternate" type="text/html" title="RUSTSEC-2023-0003: Vulnerability in libgit2-sys"/><published>2023-01-20T12:00:00+00:00</published><summary xml:lang="en">git2 does not verify SSH keys by default</summary><content xml:lang="en" type="html">  &lt;article&gt;
-    
-        &lt;span class=&quot;floating-menu&quot;&gt;
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/libgit2-sys/RUSTSEC-2023-0003.md&quot;&gt;History&lt;/a&gt; ⋅ 
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/libgit2-sys/RUSTSEC-2023-0003.md&quot;&gt;Edit&lt;/a&gt;
-        &lt;/span&gt;
-    
-
-    &lt;header&gt;
-      &lt;h1&gt;
-        
-        RUSTSEC-2023-0003
-        
-      &lt;/h1&gt;
-      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;git2 does not verify SSH keys by default&lt;/p&gt;
-&lt;/span&gt;
-    &lt;/header&gt;
-
-    
-
-    &lt;dl&gt;
-      &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2023-01-20&quot;&gt;
-          January 20, 2023
-        &lt;/time&gt;
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2023-01-20&quot;&gt;
-          January 20, 2023
-        &lt;/time&gt;
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        
-        &lt;a href=&quot;/packages/libgit2-sys.html&quot;&gt;libgit2-sys&lt;/a&gt;
-          (&lt;a href=&quot;https://crates.io/crates/libgit2-sys&quot;&gt;crates.io&lt;/a&gt;)
-        
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        Vulnerability
-        
-      &lt;/dd&gt;
-
-      
-      &lt;dt id=&quot;categories&quot;&gt;Categories&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;a href=&quot;/categories/crypto-failure.html&quot;&gt;crypto-failure&lt;/a&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-      &lt;/dd&gt;
-      
-
-      
-      &lt;dt id=&quot;keywords&quot;&gt;Keywords&lt;/dt&gt;
-      &lt;dd&gt;
-        
-          &lt;a href=&quot;/keywords/ssh.html&quot;&gt;#ssh&lt;/a&gt;
-        
-          &lt;a href=&quot;/keywords/mitm.html&quot;&gt;#mitm&lt;/a&gt;
-        
-          &lt;a href=&quot;/keywords/git.html&quot;&gt;#git&lt;/a&gt;
-        
-      &lt;/dd&gt;
-      
-
-      
-      &lt;dt id=&quot;aliases&quot;&gt;Aliases&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;ul&gt;
-          
-          &lt;li&gt;
-            
-            &lt;a href=&quot;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22742&quot;&gt;CVE-2023-22742&lt;/a&gt;
-            
-          &lt;/li&gt;
-          
-          &lt;li&gt;
-            
-            &lt;a href=&quot;https://github.com/advisories/GHSA-m4ch-rfv5-x5g3&quot;&gt;GHSA-m4ch-rfv5-x5g3&lt;/a&gt;
-            
-          &lt;/li&gt;
-          
-          &lt;li&gt;
-            
-            &lt;a href=&quot;https://github.com/advisories/GHSA-8643-3wh5-rmjq&quot;&gt;GHSA-8643-3wh5-rmjq&lt;/a&gt;
-            
-          &lt;/li&gt;
-          
-        &lt;/ul&gt;
-      &lt;/dd&gt;
-      
-
-      
-      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;a href=&quot;https://github.com/rust-lang/git2-rs/security/advisories/GHSA-m4ch-rfv5-x5g3&quot;&gt;
-          https://github.com/rust-lang/git2-rs/security/advisories/GHSA-m4ch-rfv5-x5g3
-        &lt;/a&gt;
-      &lt;/dd&gt;
-      
-
-      
-
-      
-      
-
-      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;code&gt;&amp;gt;=0.13.5, &amp;lt;0.14.0&lt;/code&gt;&lt;/li&gt;
-          
-          &lt;li&gt;&lt;code&gt;&amp;gt;=0.14.2&lt;/code&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-        
-      &lt;/dd&gt;
-
-      
-
-      
-      
-    &lt;/dl&gt;
-
-    
-    
-
-    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-    &lt;p&gt;The git2 and libgit2-sys crates are Rust wrappers around the
-&lt;a href=&quot;&quot;&gt;libgit2&lt;/a&gt; C library. It was discovered that libgit2 1.5.0
-and below did not verify SSH host keys when establishing an SSH connection,
-exposing users of the library to Man-In-the-Middle attacks.&lt;/p&gt;
-&lt;p&gt;The libgit2 team assigned &lt;a href=&quot;https://github.com/libgit2/libgit2/security/advisories/GHSA-8643-3wh5-rmjq&quot;&gt;CVE-2023-22742&lt;/a&gt; to this
-vulnerability. The following versions of the libgit2-sys Rust crate have been
-released:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;libgit2-sys 0.14.2, updating the underlying libgit2 C library to version 1.5.1.&lt;/li&gt;
-&lt;li&gt;libgit2-sys 0.13.5, updating the underlying libgit2 C library to version 1.4.5.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;A new git2 crate version has also been released, 0.16.1. This version only
-bumps its libgit2-sys dependency to ensure no vulnerable libgit2-sys versions
-are used, but contains no code changes: if you update the libgit2-sys version
-there is no need to also update the git2 crate version.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/libgit2/libgit2/security/advisories/GHSA-8643-3wh5-rmjq&quot;&gt;You can learn more about this vulnerability in libgit2&apos;s advisory&lt;/a&gt;&lt;/p&gt;
-
-  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2022-0081: json is unmaintained</title><id>https://rustsec.org/advisories/RUSTSEC-2022-0081.html</id><updated>2023-01-19T12:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2022-0081.html" rel="alternate" type="text/html" title="RUSTSEC-2022-0081: json is unmaintained"/><published>2023-01-19T12:00:00+00:00</published><summary xml:lang="en">json is unmaintained</summary><content xml:lang="en" type="html">  &lt;article&gt;
-    
-        &lt;span class=&quot;floating-menu&quot;&gt;
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/json/RUSTSEC-2022-0081.md&quot;&gt;History&lt;/a&gt; ⋅ 
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/json/RUSTSEC-2022-0081.md&quot;&gt;Edit&lt;/a&gt;
-        &lt;/span&gt;
-    
-
-    &lt;header&gt;
-      &lt;h1&gt;
-        
-        RUSTSEC-2022-0081
-        
-      &lt;/h1&gt;
-      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;json is unmaintained&lt;/p&gt;
-&lt;/span&gt;
-    &lt;/header&gt;
-
-    
-
-    &lt;dl&gt;
-      &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2022-02-01&quot;&gt;
-          February  1, 2022
-        &lt;/time&gt;
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2023-01-19&quot;&gt;
-          January 19, 2023
-        &lt;/time&gt;
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        
-        &lt;a href=&quot;/packages/json.html&quot;&gt;json&lt;/a&gt;
-          (&lt;a href=&quot;https://crates.io/crates/json&quot;&gt;crates.io&lt;/a&gt;)
-        
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
-        Unmaintained
-        
-      &lt;/dd&gt;
-
-      
-
-      
-
-      
-
-      
-      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;a href=&quot;https://github.com/maciejhirsz/json-rust/issues/205&quot;&gt;
-          https://github.com/maciejhirsz/json-rust/issues/205
-        &lt;/a&gt;
-      &lt;/dd&gt;
-      
-
-      
-
-      
-      
-
-      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        no patched versions
-        
-      &lt;/dd&gt;
-
-      
-
-      
-      
-    &lt;/dl&gt;
-
-    
-    
-
-    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-    &lt;p&gt;Last release was almost 3 years ago.&lt;/p&gt;
-&lt;p&gt;The maintainer is unresponsive with outstanding issues.&lt;/p&gt;
-&lt;p&gt;One of the outstanding issues include &lt;a href=&quot;https://github.com/maciejhirsz/json-rust/issues/196&quot;&gt;a possible soundness issue&lt;/a&gt;.&lt;/p&gt;
-&lt;h2&gt;Possible Alternative(s)&lt;/h2&gt;
-&lt;p&gt;The below list has not been vetted in any way and may or may not contain alternatives;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://crates.io/crates/serde_json&quot;&gt;serde_json&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://crates.io/crates/json-deserializer&quot;&gt;json-deserializer&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://crates.io/crates/simd-json&quot;&gt;simd-json&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2022-0080: parity-util-mem is unmaintained</title><id>https://rustsec.org/advisories/RUSTSEC-2022-0080.html</id><updated>2023-01-16T12:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2022-0080.html" rel="alternate" type="text/html" title="RUSTSEC-2022-0080: parity-util-mem is unmaintained"/><published>2023-01-16T12:00:00+00:00</published><summary xml:lang="en">parity-util-mem Unmaintained</summary><content xml:lang="en" type="html">  &lt;article&gt;
-    
-        &lt;span class=&quot;floating-menu&quot;&gt;
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/parity-util-mem/RUSTSEC-2022-0080.md&quot;&gt;History&lt;/a&gt; ⋅ 
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/parity-util-mem/RUSTSEC-2022-0080.md&quot;&gt;Edit&lt;/a&gt;
-        &lt;/span&gt;
-    
-
-    &lt;header&gt;
-      &lt;h1&gt;
-        
-        RUSTSEC-2022-0080
-        
-      &lt;/h1&gt;
-      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;parity-util-mem Unmaintained&lt;/p&gt;
-&lt;/span&gt;
-    &lt;/header&gt;
-
-    
-
-    &lt;dl&gt;
-      &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2022-11-30&quot;&gt;
-          November 30, 2022
-        &lt;/time&gt;
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2023-01-16&quot;&gt;
-          January 16, 2023
-        &lt;/time&gt;
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        
-        &lt;a href=&quot;/packages/parity-util-mem.html&quot;&gt;parity-util-mem&lt;/a&gt;
-          (&lt;a href=&quot;https://crates.io/crates/parity-util-mem&quot;&gt;crates.io&lt;/a&gt;)
-        
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
-        Unmaintained
-        
-      &lt;/dd&gt;
-
-      
-
-      
-
-      
-
-      
-      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;a href=&quot;https://github.com/paritytech/parity-common/pull/696&quot;&gt;
-          https://github.com/paritytech/parity-common/pull/696
-        &lt;/a&gt;
-      &lt;/dd&gt;
-      
-
-      
-
-      
-      
-
-      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        no patched versions
-        
-      &lt;/dd&gt;
-
-      
-
-      
-      
-    &lt;/dl&gt;
-
-    
-    
-
-    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-    &lt;p&gt;The crate has been deprecated and will receive no updates with no repository source.&lt;/p&gt;
-&lt;p&gt;The crate has &lt;a href=&quot;https://crates.io/crates/parity-util-mem&quot;&gt;a warning&lt;/a&gt; surrounding it&apos;s use related to global allocator use that may lead to UB.&lt;/p&gt;
-
-  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2021-0146: twoway is unmaintained</title><id>https://rustsec.org/advisories/RUSTSEC-2021-0146.html</id><updated>2023-01-15T12:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2021-0146.html" rel="alternate" type="text/html" title="RUSTSEC-2021-0146: twoway is unmaintained"/><published>2023-01-15T12:00:00+00:00</published><summary xml:lang="en">Crate `twoway` deprecated by the author</summary><content xml:lang="en" type="html">  &lt;article&gt;
-    
-        &lt;span class=&quot;floating-menu&quot;&gt;
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/twoway/RUSTSEC-2021-0146.md&quot;&gt;History&lt;/a&gt; ⋅ 
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/twoway/RUSTSEC-2021-0146.md&quot;&gt;Edit&lt;/a&gt;
-        &lt;/span&gt;
-    
-
-    &lt;header&gt;
-      &lt;h1&gt;
-        
-        RUSTSEC-2021-0146
-        
-      &lt;/h1&gt;
-      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;Crate &lt;code&gt;twoway&lt;/code&gt; deprecated by the author&lt;/p&gt;
-&lt;/span&gt;
-    &lt;/header&gt;
-
-    
-
-    &lt;dl&gt;
-      &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2021-05-20&quot;&gt;
-          May 20, 2021
-        &lt;/time&gt;
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2023-01-15&quot;&gt;
-          January 15, 2023
-        &lt;/time&gt;
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        
-        &lt;a href=&quot;/packages/twoway.html&quot;&gt;twoway&lt;/a&gt;
-          (&lt;a href=&quot;https://crates.io/crates/twoway&quot;&gt;crates.io&lt;/a&gt;)
-        
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
-        Unmaintained
-        
-      &lt;/dd&gt;
-
-      
-
-      
-
-      
-
-      
-      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;a href=&quot;https://github.com/bluss/twoway&quot;&gt;
-          https://github.com/bluss/twoway
-        &lt;/a&gt;
-      &lt;/dd&gt;
-      
-
-      
-
-      
-      
-
-      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        no patched versions
-        
-      &lt;/dd&gt;
-
-      
-
-      
-      
-    &lt;/dl&gt;
-
-    
-    
-
-    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-    &lt;p&gt;The commit &lt;a href=&quot;https://github.com/bluss/twoway/commit/e99b3c718df1117ad7f54c33f6540c8f46cc17dd&quot;&gt;&lt;code&gt;e99b3c7&lt;/code&gt;&lt;/a&gt; releasing version 0.2.2 explicitely deprecates &lt;code&gt;twoway&lt;/code&gt; in favour of &lt;a href=&quot;https://crates.io/crates/memchr&quot;&gt;&lt;code&gt;memchr&lt;/code&gt;&lt;/a&gt; crate.&lt;/p&gt;
-
-  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2022-0079: Vulnerability in elf_rs</title><id>https://rustsec.org/advisories/RUSTSEC-2022-0079.html</id><updated>2023-01-18T12:00:00+00:00</updated><category term="memory-corruption"/><link href="https://rustsec.org/advisories/RUSTSEC-2022-0079.html" rel="alternate" type="text/html" title="RUSTSEC-2022-0079: Vulnerability in elf_rs"/><published>2023-01-15T12:00:00+00:00</published><summary xml:lang="en">ELF header parsing library doesn&amp;apos;t check for valid offset</summary><content xml:lang="en" type="html">  &lt;article&gt;
-    
-        &lt;span class=&quot;floating-menu&quot;&gt;
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/elf_rs/RUSTSEC-2022-0079.md&quot;&gt;History&lt;/a&gt; ⋅ 
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/elf_rs/RUSTSEC-2022-0079.md&quot;&gt;Edit&lt;/a&gt;
-        &lt;/span&gt;
-    
-
-    &lt;header&gt;
-      &lt;h1&gt;
-        
-        RUSTSEC-2022-0079
-        
-      &lt;/h1&gt;
-      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;ELF header parsing library doesn&apos;t check for valid offset&lt;/p&gt;
-&lt;/span&gt;
-    &lt;/header&gt;
-
-    
-
-    &lt;dl&gt;
-      &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2022-10-31&quot;&gt;
-          October 31, 2022
-        &lt;/time&gt;
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2023-01-15&quot;&gt;
-          January 15, 2023
-        &lt;/time&gt;
-        
-        &lt;time datetime=&quot;2023-01-18&quot;&gt;
-          (last modified: January 18, 2023)
-        &lt;/time&gt;
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        
-        &lt;a href=&quot;/packages/elf_rs.html&quot;&gt;elf_rs&lt;/a&gt;
-          (&lt;a href=&quot;https://crates.io/crates/elf_rs&quot;&gt;crates.io&lt;/a&gt;)
-        
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        Vulnerability
-        
-      &lt;/dd&gt;
-
-      
-      &lt;dt id=&quot;categories&quot;&gt;Categories&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;a href=&quot;/categories/memory-corruption.html&quot;&gt;memory-corruption&lt;/a&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-      &lt;/dd&gt;
-      
-
-      
-      &lt;dt id=&quot;keywords&quot;&gt;Keywords&lt;/dt&gt;
-      &lt;dd&gt;
-        
-          &lt;a href=&quot;/keywords/elf.html&quot;&gt;#elf&lt;/a&gt;
-        
-          &lt;a href=&quot;/keywords/header.html&quot;&gt;#header&lt;/a&gt;
-        
-      &lt;/dd&gt;
-      
-
-      
-
-      
-      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;a href=&quot;https://github.com/vincenthouyi/elf_rs/issues/11&quot;&gt;
-          https://github.com/vincenthouyi/elf_rs/issues/11
-        &lt;/a&gt;
-      &lt;/dd&gt;
-      
-
-      
-
-      
-      
-
-      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;code&gt;&amp;gt;=0.3.0&lt;/code&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-        
-      &lt;/dd&gt;
-
-      
-
-      
-      
-
-      
-      
-    &lt;/dl&gt;
-
-    
-    
-
-    
-
-    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-    &lt;p&gt;The crate has several unsafe sections that don&apos;t perform proper pointer validation.&lt;/p&gt;
-&lt;p&gt;An example can be found in the following function:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;fn section_header_raw(&amp;amp;self) -&amp;gt; &amp;amp;[ET::SectionHeader] {
-    let sh_off = self.elf_header().section_header_offset() as usize;
-    let sh_num = self.elf_header().section_header_entry_num() as usize;
-    unsafe {
-        let sh_ptr = self.content().as_ptr().add(sh_off);
-        from_raw_parts(sh_ptr as *const ET::SectionHeader, sh_num)
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;While this will work perfectly fine &lt;em&gt;if&lt;/em&gt; the ELF header is valid, malicious or
-malformed input can contain a section header offset of an arbitrary size, meaning
-that the resultant pointer in the unsafe block can point to an artibrary address
-in the address space of the process.&lt;/p&gt;
-&lt;p&gt;This can result in unpredictable behaviour, and in our fuzz testing, we discovered
-that it&apos;s trivial to cause SIGABRT (signal 6), or SEGV (signal 11).&lt;/p&gt;
-&lt;p&gt;The function should either be marked as unsafe, with a note that the caller is responsible
-for providing only valid inputs, or it should ideally do the due diligence to ensure that the
-offset doesn&apos;t exceed the bounds of the header (and add additional checks as necessary).&lt;/p&gt;
-
-  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2022-0078: Unsoundness in bumpalo</title><id>https://rustsec.org/advisories/RUSTSEC-2022-0078.html</id><updated>2023-01-14T12:00:00+00:00</updated><category term="memory-corruption"/><category term="memory-exposure"/><link href="https://rustsec.org/advisories/RUSTSEC-2022-0078.html" rel="alternate" type="text/html" title="RUSTSEC-2022-0078: Unsoundness in bumpalo"/><published>2023-01-14T12:00:00+00:00</published><summary xml:lang="en">Use-after-free due to a lifetime error in `Vec::into_iter()`</summary><content xml:lang="en" type="html">  &lt;article&gt;
-    
-        &lt;span class=&quot;floating-menu&quot;&gt;
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/bumpalo/RUSTSEC-2022-0078.md&quot;&gt;History&lt;/a&gt; ⋅ 
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/bumpalo/RUSTSEC-2022-0078.md&quot;&gt;Edit&lt;/a&gt;
-        &lt;/span&gt;
-    
-
-    &lt;header&gt;
-      &lt;h1&gt;
-        
-        RUSTSEC-2022-0078
-        
-      &lt;/h1&gt;
-      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;Use-after-free due to a lifetime error in &lt;code&gt;Vec::into_iter()&lt;/code&gt;&lt;/p&gt;
-&lt;/span&gt;
-    &lt;/header&gt;
-
-    
-
-    &lt;dl&gt;
-      &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2022-01-14&quot;&gt;
-          January 14, 2022
-        &lt;/time&gt;
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;time datetime=&quot;2023-01-14&quot;&gt;
-          January 14, 2023
-        &lt;/time&gt;
-        
-      &lt;/dd&gt;
-
-      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
-      &lt;dd&gt;
-        
-        
-        &lt;a href=&quot;/packages/bumpalo.html&quot;&gt;bumpalo&lt;/a&gt;
-          (&lt;a href=&quot;https://crates.io/crates/bumpalo&quot;&gt;crates.io&lt;/a&gt;)
+        &lt;a href=&quot;/packages/out-reference.html&quot;&gt;out-reference&lt;/a&gt;
+          (&lt;a href=&quot;https://crates.io/crates/out-reference&quot;&gt;crates.io&lt;/a&gt;)
         
         
       &lt;/dd&gt;
@@ -882,8 +60,6 @@ offset doesn&apos;t exceed the bounds of the header (and add additional checks a
           
           &lt;li&gt;&lt;a href=&quot;/categories/memory-corruption.html&quot;&gt;memory-corruption&lt;/a&gt;&lt;/li&gt;
           
-          &lt;li&gt;&lt;a href=&quot;/categories/memory-exposure.html&quot;&gt;memory-exposure&lt;/a&gt;&lt;/li&gt;
-          
         &lt;/ul&gt;
       &lt;/dd&gt;
       
@@ -892,7 +68,9 @@ offset doesn&apos;t exceed the bounds of the header (and add additional checks a
       &lt;dt id=&quot;keywords&quot;&gt;Keywords&lt;/dt&gt;
       &lt;dd&gt;
         
-          &lt;a href=&quot;/keywords/use-after-free.html&quot;&gt;#use-after-free&lt;/a&gt;
+          &lt;a href=&quot;/keywords/unsound.html&quot;&gt;#unsound&lt;/a&gt;
+        
+          &lt;a href=&quot;/keywords/raw-pointer.html&quot;&gt;#raw-pointer&lt;/a&gt;
         
       &lt;/dd&gt;
       
@@ -902,8 +80,8 @@ offset doesn&apos;t exceed the bounds of the header (and add additional checks a
       
       &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
       &lt;dd&gt;
-        &lt;a href=&quot;https://github.com/fitzgen/bumpalo/blob/main/CHANGELOG.md#3111&quot;&gt;
-          https://github.com/fitzgen/bumpalo/blob/main/CHANGELOG.md#3111
+        &lt;a href=&quot;https://github.com/RustyYato/out-ref/issues/1&quot;&gt;
+          https://github.com/RustyYato/out-ref/issues/1
         &lt;/a&gt;
       &lt;/dd&gt;
       
@@ -918,7 +96,7 @@ offset doesn&apos;t exceed the bounds of the header (and add additional checks a
         
         &lt;ul&gt;
           
-          &lt;li&gt;&lt;code&gt;&amp;gt;=3.11.1&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code&gt;&amp;gt;=0.2.0&lt;/code&gt;&lt;/li&gt;
           
         &lt;/ul&gt;
         
@@ -929,7 +107,7 @@ offset doesn&apos;t exceed the bounds of the header (and add additional checks a
       &lt;dd&gt;
         &lt;ul&gt;
           
-          &lt;li&gt;&lt;code&gt;&amp;lt;1.1.0&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code&gt;&amp;lt;0.1.0&lt;/code&gt;&lt;/li&gt;
           
         &lt;/ul&gt;
       &lt;/dd&gt;
@@ -948,11 +126,11 @@ offset doesn&apos;t exceed the bounds of the header (and add additional checks a
       &lt;dt&gt;Affected Functions&lt;/dt&gt;
       &lt;dd&gt;Version&lt;/dd&gt;
       
-      &lt;dt&gt;&lt;code&gt;bumpalo::collections::vec::Vec::into_iter&lt;/code&gt;&lt;/dt&gt;
+      &lt;dt&gt;&lt;code&gt;out_reference::Out::from_raw&lt;/code&gt;&lt;/dt&gt;
       &lt;dd&gt;
         &lt;ul&gt;
           
-          &lt;li&gt;&lt;code&gt;&amp;lt;3.11.1&lt;/code&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;code&gt;&amp;gt;=0.1.0, &amp;lt;0.2.0&lt;/code&gt;&lt;/li&gt;
           
         &lt;/ul&gt;
       &lt;/dd&gt;
@@ -963,51 +141,24 @@ offset doesn&apos;t exceed the bounds of the header (and add additional checks a
     
 
     &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-    &lt;p&gt;In affected versions of this crate, the lifetime of the iterator produced by
-&lt;code&gt;Vec::into_iter()&lt;/code&gt; is not constrained to the lifetime of the &lt;code&gt;Bump&lt;/code&gt; that
-allocated the vector&apos;s memory. Using the iterator after the &lt;code&gt;Bump&lt;/code&gt; is dropped
-causes use-after-free accesses.&lt;/p&gt;
-&lt;p&gt;The following example demonstrates memory corruption arising from a misuse of
-this unsoundness.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-rust&quot;&gt;use bumpalo::{collections::Vec, Bump};
+    &lt;p&gt;&lt;code&gt;Out::from_raw&lt;/code&gt; in affected versions allows writing a value to invalid memory address without requiring &lt;code&gt;unsafe&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The soundness issue has been addressed by making &lt;code&gt;Out::from_raw&lt;/code&gt; an unsafe function.&lt;/p&gt;
 
-fn main() {
-    let bump = Bump::new();
-    let mut vec = Vec::new_in(&amp;amp;bump);
-    vec.extend([0x01u8; 32]);
-    let into_iter = vec.into_iter();
-    drop(bump);
-
-    for _ in 0..100 {
-        let reuse_bump = Bump::new();
-        let _reuse_alloc = reuse_bump.alloc([0x41u8; 10]);
-    }
-
-    for x in into_iter {
-        print!(&amp;quot;0x{:02x} &amp;quot;, x);
-    }
-    println!();
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The issue was corrected in version 3.11.1 by adding a lifetime to the &lt;code&gt;IntoIter&lt;/code&gt;
-type, and updating the signature of &lt;code&gt;Vec::into_iter()&lt;/code&gt; to constrain this
-lifetime.&lt;/p&gt;
-
-  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2022-0077: claim is unmaintained</title><id>https://rustsec.org/advisories/RUSTSEC-2022-0077.html</id><updated>2023-01-14T12:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2022-0077.html" rel="alternate" type="text/html" title="RUSTSEC-2022-0077: claim is unmaintained"/><published>2023-01-14T12:00:00+00:00</published><summary xml:lang="en">`claim` is Unmaintained</summary><content xml:lang="en" type="html">  &lt;article&gt;
+  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2023-0020: Unsoundness in const-cstr</title><id>https://rustsec.org/advisories/RUSTSEC-2023-0020.html</id><updated>2023-03-12T12:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2023-0020.html" rel="alternate" type="text/html" title="RUSTSEC-2023-0020: Unsoundness in const-cstr"/><published>2023-03-12T12:00:00+00:00</published><summary xml:lang="en">const-cstr is Unmaintained</summary><content xml:lang="en" type="html">  &lt;article&gt;
     
         &lt;span class=&quot;floating-menu&quot;&gt;
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/claim/RUSTSEC-2022-0077.md&quot;&gt;History&lt;/a&gt; ⋅ 
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/claim/RUSTSEC-2022-0077.md&quot;&gt;Edit&lt;/a&gt;
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/const-cstr/RUSTSEC-2023-0020.md&quot;&gt;History&lt;/a&gt; ⋅ 
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/const-cstr/RUSTSEC-2023-0020.md&quot;&gt;Edit&lt;/a&gt;
         &lt;/span&gt;
     
 
     &lt;header&gt;
       &lt;h1&gt;
         
-        RUSTSEC-2022-0077
+        RUSTSEC-2023-0020
         
       &lt;/h1&gt;
-      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;&lt;code&gt;claim&lt;/code&gt; is Unmaintained&lt;/p&gt;
+      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;const-cstr is Unmaintained&lt;/p&gt;
 &lt;/span&gt;
     &lt;/header&gt;
 
@@ -1016,15 +167,15 @@ lifetime.&lt;/p&gt;
     &lt;dl&gt;
       &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
       &lt;dd&gt;
-        &lt;time datetime=&quot;2022-12-04&quot;&gt;
-          December  4, 2022
+        &lt;time datetime=&quot;2023-03-12&quot;&gt;
+          March 12, 2023
         &lt;/time&gt;
       &lt;/dd&gt;
 
       &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
       &lt;dd&gt;
-        &lt;time datetime=&quot;2023-01-14&quot;&gt;
-          January 14, 2023
+        &lt;time datetime=&quot;2023-03-12&quot;&gt;
+          March 12, 2023
         &lt;/time&gt;
         
       &lt;/dd&gt;
@@ -1033,8 +184,8 @@ lifetime.&lt;/p&gt;
       &lt;dd&gt;
         
         
-        &lt;a href=&quot;/packages/claim.html&quot;&gt;claim&lt;/a&gt;
-          (&lt;a href=&quot;https://crates.io/crates/claim&quot;&gt;crates.io&lt;/a&gt;)
+        &lt;a href=&quot;/packages/const-cstr.html&quot;&gt;const-cstr&lt;/a&gt;
+          (&lt;a href=&quot;https://crates.io/crates/const-cstr&quot;&gt;crates.io&lt;/a&gt;)
         
         
       &lt;/dd&gt;
@@ -1043,7 +194,7 @@ lifetime.&lt;/p&gt;
       &lt;dd&gt;
         
         &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
-        Unmaintained
+        Unsound
         
       &lt;/dd&gt;
 
@@ -1056,8 +207,8 @@ lifetime.&lt;/p&gt;
       
       &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
       &lt;dd&gt;
-        &lt;a href=&quot;https://github.com/svartalf/rust-claim/issues/12&quot;&gt;
-          https://github.com/svartalf/rust-claim/issues/12
+        &lt;a href=&quot;https://github.com/abonander/const-cstr&quot;&gt;
+          https://github.com/abonander/const-cstr
         &lt;/a&gt;
       &lt;/dd&gt;
       
@@ -1084,51 +235,55 @@ lifetime.&lt;/p&gt;
     
 
     &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-    &lt;p&gt;The last release was in February 2021, almost two years ago.&lt;/p&gt;
-&lt;p&gt;The maintainer has been unresponsive regarding this crate for over a year.&lt;/p&gt;
-&lt;p&gt;A pending issue with &lt;code&gt;claim&lt;/code&gt;&apos;s dependencies has made the crate &lt;a href=&quot;https://github.com/svartalf/rust-claim/issues/9&quot;&gt;difficul to use&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;Possible Alternative(s)&lt;/h2&gt;
-&lt;p&gt;The below list has not been vetted in any way and may or may not contain alternatives;&lt;/p&gt;
+    &lt;p&gt;Last release was about five years ago.&lt;/p&gt;
+&lt;p&gt;The maintainer(s) have been unreachable to respond to any issues that may or may not include security issues.&lt;/p&gt;
+&lt;p&gt;The repository is now archived and there is no security policy in place to contact the maintainer(s) otherwise.&lt;/p&gt;
+&lt;p&gt;No direct fork exist.&lt;/p&gt;
+&lt;h1&gt;const-cstr is Unsound&lt;/h1&gt;
+&lt;p&gt;The crate violates the safety contract of &lt;a href=&quot;https://doc.rust-lang.org/std/ffi/struct.CStr.html#method.from_bytes_with_nul_unchecked&quot;&gt;ffi::CStr::from_bytes_with_nul_unchecked&lt;/a&gt; used in &lt;code&gt;ConstCStr::as_cstr&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;No interior nul bytes checking is done either by the constructor or the canonical macro to create the &lt;code&gt;ConstCStr&lt;/code&gt;&lt;/p&gt;
+&lt;h1&gt;const-cstr Panic&lt;/h1&gt;
+&lt;p&gt;Additionally the crate may cause runtime panics if statically compiled and ran with any untrusted data that is not nul-terminated.&lt;/p&gt;
+&lt;p&gt;This is however unlikely but the the crate should not be used for untrusted data in context where panic may create a DoS vector.&lt;/p&gt;
+&lt;h2&gt;Possible Alternatives&lt;/h2&gt;
+&lt;p&gt;The below may or may not provide alternative(s)&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://crates.io/crates/claims&quot;&gt;&lt;code&gt;claims&lt;/code&gt;&lt;/a&gt;, a direct fork of the &lt;code&gt;claim&lt;/code&gt; crate&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.rs/const-str/latest/const_str/macro.cstr.html&quot;&gt;const_str::cstr!&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://crates.io/crates/cstr&quot;&gt;cstr::cstr!&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2023-0002: Vulnerability in git2</title><id>https://rustsec.org/advisories/RUSTSEC-2023-0002.html</id><updated>2023-01-12T12:00:00+00:00</updated><category term="crypto-failure"/><link href="https://rustsec.org/advisories/RUSTSEC-2023-0002.html" rel="alternate" type="text/html" title="RUSTSEC-2023-0002: Vulnerability in git2"/><published>2023-01-12T12:00:00+00:00</published><summary xml:lang="en">git2 Rust package suppresses ssh host key checking</summary><content xml:lang="en" type="html">  &lt;article&gt;
+  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2019-0040: boxfnonce is unmaintained</title><id>https://rustsec.org/advisories/RUSTSEC-2019-0040.html</id><updated>2023-03-12T12:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2019-0040.html" rel="alternate" type="text/html" title="RUSTSEC-2019-0040: boxfnonce is unmaintained"/><published>2023-03-12T12:00:00+00:00</published><summary xml:lang="en">`boxfnonce` obsolete with release of Rust 1.35.0</summary><content xml:lang="en" type="html">  &lt;article&gt;
     
         &lt;span class=&quot;floating-menu&quot;&gt;
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/git2/RUSTSEC-2023-0002.md&quot;&gt;History&lt;/a&gt; ⋅ 
-          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/git2/RUSTSEC-2023-0002.md&quot;&gt;Edit&lt;/a&gt;
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/boxfnonce/RUSTSEC-2019-0040.md&quot;&gt;History&lt;/a&gt; ⋅ 
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/boxfnonce/RUSTSEC-2019-0040.md&quot;&gt;Edit&lt;/a&gt;
         &lt;/span&gt;
     
 
     &lt;header&gt;
       &lt;h1&gt;
         
-        &lt;span class=&quot;withdrawn&quot;&gt;RUSTSEC-2023-0002&lt;/span&gt;
+        RUSTSEC-2019-0040
         
       &lt;/h1&gt;
-      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;git2 Rust package suppresses ssh host key checking&lt;/p&gt;
+      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;&lt;code&gt;boxfnonce&lt;/code&gt; obsolete with release of Rust 1.35.0&lt;/p&gt;
 &lt;/span&gt;
     &lt;/header&gt;
 
-    
-    &lt;hr&gt;
-    &lt;p class=&quot;warning&quot;&gt;This advisory has been withdrawn and should be ignored. It is kept only for reference.&lt;/p&gt;
-    &lt;hr&gt;
     
 
     &lt;dl&gt;
       &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
       &lt;dd&gt;
-        &lt;time datetime=&quot;2023-01-12&quot;&gt;
-          January 12, 2023
+        &lt;time datetime=&quot;2019-06-20&quot;&gt;
+          June 20, 2019
         &lt;/time&gt;
       &lt;/dd&gt;
 
       &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
       &lt;dd&gt;
-        &lt;time datetime=&quot;2023-01-12&quot;&gt;
-          January 12, 2023
+        &lt;time datetime=&quot;2023-03-12&quot;&gt;
+          March 12, 2023
         &lt;/time&gt;
         
       &lt;/dd&gt;
@@ -1137,8 +292,8 @@ lifetime.&lt;/p&gt;
       &lt;dd&gt;
         
         
-        &lt;a href=&quot;/packages/git2.html&quot;&gt;git2&lt;/a&gt;
-          (&lt;a href=&quot;https://crates.io/crates/git2&quot;&gt;crates.io&lt;/a&gt;)
+        &lt;a href=&quot;/packages/boxfnonce.html&quot;&gt;boxfnonce&lt;/a&gt;
+          (&lt;a href=&quot;https://crates.io/crates/boxfnonce&quot;&gt;crates.io&lt;/a&gt;)
         
         
       &lt;/dd&gt;
@@ -1146,32 +301,13 @@ lifetime.&lt;/p&gt;
       &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
       &lt;dd&gt;
         
-        Vulnerability
+        &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
+        Unmaintained
         
       &lt;/dd&gt;
 
       
-      &lt;dt id=&quot;categories&quot;&gt;Categories&lt;/dt&gt;
-      &lt;dd&gt;
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;a href=&quot;/categories/crypto-failure.html&quot;&gt;crypto-failure&lt;/a&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
-      &lt;/dd&gt;
-      
 
-      
-      &lt;dt id=&quot;keywords&quot;&gt;Keywords&lt;/dt&gt;
-      &lt;dd&gt;
-        
-          &lt;a href=&quot;/keywords/cargo.html&quot;&gt;#cargo&lt;/a&gt;
-        
-          &lt;a href=&quot;/keywords/ssh.html&quot;&gt;#ssh&lt;/a&gt;
-        
-          &lt;a href=&quot;/keywords/mitm.html&quot;&gt;#mitm&lt;/a&gt;
-        
-      &lt;/dd&gt;
       
 
       
@@ -1179,8 +315,8 @@ lifetime.&lt;/p&gt;
       
       &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
       &lt;dd&gt;
-        &lt;a href=&quot;https://github.com/rust-lang/git2-rs/pull/909&quot;&gt;
-          https://github.com/rust-lang/git2-rs/pull/909
+        &lt;a href=&quot;https://github.com/stbuehler/rust-boxfnonce/commit/058ac7e1a7d732076da9d8a37baa66bcb67758d8&quot;&gt;
+          https://github.com/stbuehler/rust-boxfnonce/commit/058ac7e1a7d732076da9d8a37baa66bcb67758d8
         &lt;/a&gt;
       &lt;/dd&gt;
       
@@ -1193,11 +329,7 @@ lifetime.&lt;/p&gt;
       &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
       &lt;dd&gt;
         
-        &lt;ul&gt;
-          
-          &lt;li&gt;&lt;code&gt;&amp;gt;=0.16.0&lt;/code&gt;&lt;/li&gt;
-          
-        &lt;/ul&gt;
+        no patched versions
         
       &lt;/dd&gt;
 
@@ -1211,70 +343,678 @@ lifetime.&lt;/p&gt;
     
 
     &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
-    &lt;p&gt;By default, when accessing an ssh repository
-(ie via an &lt;code&gt;ssh:&lt;/code&gt; git repository url)
-the git2 Rust package does not do any host key checking.&lt;/p&gt;
-&lt;p&gt;Additionally,
-the provided API is not sufficient for a an application
-to do meaningful checking itself.&lt;/p&gt;
-&lt;h2&gt;Impact&lt;/h2&gt;
-&lt;p&gt;When connecting to an ssh repository,
-and when an attacker can redirect the connection
-(performing a malice-in-the-middle attack)
-an affected application might:&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/stbuehler/rust-boxfnonce/commit/058ac7e1a7d732076da9d8a37baa66bcb67758d8&quot;&gt;This&lt;/a&gt; commit marks the &lt;code&gt;boxfnonce&lt;/code&gt; crate as obsolete and the GitHub repo has since been archived.&lt;/p&gt;
+&lt;p&gt;The functionality of &lt;code&gt;boxfnonce&lt;/code&gt; has been added to Rust since 1.35.0. Use &lt;code&gt;Box&amp;lt;dyn FnOnce(...) -&amp;gt; ...&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2021-0150: ncollide3d is unmaintained</title><id>https://rustsec.org/advisories/RUSTSEC-2021-0150.html</id><updated>2023-03-12T12:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2021-0150.html" rel="alternate" type="text/html" title="RUSTSEC-2021-0150: ncollide3d is unmaintained"/><published>2023-03-12T12:00:00+00:00</published><summary xml:lang="en">ncollide3d is unmaintained</summary><content xml:lang="en" type="html">  &lt;article&gt;
+    
+        &lt;span class=&quot;floating-menu&quot;&gt;
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/ncollide3d/RUSTSEC-2021-0150.md&quot;&gt;History&lt;/a&gt; ⋅ 
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/ncollide3d/RUSTSEC-2021-0150.md&quot;&gt;Edit&lt;/a&gt;
+        &lt;/span&gt;
+    
+
+    &lt;header&gt;
+      &lt;h1&gt;
+        
+        RUSTSEC-2021-0150
+        
+      &lt;/h1&gt;
+      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;ncollide3d is unmaintained&lt;/p&gt;
+&lt;/span&gt;
+    &lt;/header&gt;
+
+    
+
+    &lt;dl&gt;
+      &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2021-01-29&quot;&gt;
+          January 29, 2021
+        &lt;/time&gt;
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2023-03-12&quot;&gt;
+          March 12, 2023
+        &lt;/time&gt;
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        
+        &lt;a href=&quot;/packages/ncollide3d.html&quot;&gt;ncollide3d&lt;/a&gt;
+          (&lt;a href=&quot;https://crates.io/crates/ncollide3d&quot;&gt;crates.io&lt;/a&gt;)
+        
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
+        Unmaintained
+        
+      &lt;/dd&gt;
+
+      
+
+      
+
+      
+
+      
+      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;a href=&quot;https://github.com/dimforge/ncollide&quot;&gt;
+          https://github.com/dimforge/ncollide
+        &lt;/a&gt;
+      &lt;/dd&gt;
+      
+
+      
+
+      
+      
+
+      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        no patched versions
+        
+      &lt;/dd&gt;
+
+      
+
+      
+      
+    &lt;/dl&gt;
+
+    
+    
+
+    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+    &lt;p&gt;The maintainer has advised that this crate is passively-maintained and that it
+is being superseded by the &lt;a href=&quot;https://github.com/dimforge/parry&quot;&gt;Parry&lt;/a&gt; project.&lt;/p&gt;
+
+  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2021-0153: encoding is unmaintained</title><id>https://rustsec.org/advisories/RUSTSEC-2021-0153.html</id><updated>2023-03-12T12:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2021-0153.html" rel="alternate" type="text/html" title="RUSTSEC-2021-0153: encoding is unmaintained"/><published>2023-03-12T12:00:00+00:00</published><summary xml:lang="en">`encoding` is unmaintained</summary><content xml:lang="en" type="html">  &lt;article&gt;
+    
+        &lt;span class=&quot;floating-menu&quot;&gt;
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/encoding/RUSTSEC-2021-0153.md&quot;&gt;History&lt;/a&gt; ⋅ 
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/encoding/RUSTSEC-2021-0153.md&quot;&gt;Edit&lt;/a&gt;
+        &lt;/span&gt;
+    
+
+    &lt;header&gt;
+      &lt;h1&gt;
+        
+        RUSTSEC-2021-0153
+        
+      &lt;/h1&gt;
+      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;&lt;code&gt;encoding&lt;/code&gt; is unmaintained&lt;/p&gt;
+&lt;/span&gt;
+    &lt;/header&gt;
+
+    
+
+    &lt;dl&gt;
+      &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2021-12-05&quot;&gt;
+          December  5, 2021
+        &lt;/time&gt;
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2023-03-12&quot;&gt;
+          March 12, 2023
+        &lt;/time&gt;
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        
+        &lt;a href=&quot;/packages/encoding.html&quot;&gt;encoding&lt;/a&gt;
+          (&lt;a href=&quot;https://crates.io/crates/encoding&quot;&gt;crates.io&lt;/a&gt;)
+        
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
+        Unmaintained
+        
+      &lt;/dd&gt;
+
+      
+
+      
+
+      
+
+      
+      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;a href=&quot;https://github.com/lifthrasiir/rust-encoding/issues/127&quot;&gt;
+          https://github.com/lifthrasiir/rust-encoding/issues/127
+        &lt;/a&gt;
+      &lt;/dd&gt;
+      
+
+      
+
+      
+      
+
+      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        no patched versions
+        
+      &lt;/dd&gt;
+
+      
+
+      
+      
+    &lt;/dl&gt;
+
+    
+    
+
+    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+    &lt;p&gt;Last release was on 2016-08-28. The &lt;a href=&quot;https://github.com/lifthrasiir/rust-encoding/issues/127&quot;&gt;issue&lt;/a&gt; inquiring as to the status of the crate has gone unanswered by the maintainer.&lt;/p&gt;
+&lt;h2&gt;Possible alternatives&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Receive git objects and branches controlled by the attacker,
-exposing the local system (and whatever happens next)
-to malicious data.
-In many circumstances,
-this could readily lead to privilege escalation.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Erroneously send git objects to the attacker,
-rather than to the intended recipient.
-If the information is not supposed to be public,
-this would constitute an information leak.
-Also, since the data doesn&apos;t arrive where intended,
-it consitutes a denial of service.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://crates.io/crates/encoding_rs&quot;&gt;encoding_rs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Technical details&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;git2&lt;/code&gt; Rust package (henceforth, git2-rs)
-unconditionally calls the underlying C &lt;code&gt;libgit2&lt;/code&gt; functions to set
-an ssh certificate check callback.
-The Rust package uses this to offer
-the ability for the application to set a callback to a Rust function.&lt;/p&gt;
-&lt;p&gt;The C-level callback function provided by git2-rs 0.15.0 and earlier:&lt;/p&gt;
+
+  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2020-0168: mach is unmaintained</title><id>https://rustsec.org/advisories/RUSTSEC-2020-0168.html</id><updated>2023-03-12T12:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2020-0168.html" rel="alternate" type="text/html" title="RUSTSEC-2020-0168: mach is unmaintained"/><published>2023-03-12T12:00:00+00:00</published><summary xml:lang="en">mach is unmaintained</summary><content xml:lang="en" type="html">  &lt;article&gt;
+    
+        &lt;span class=&quot;floating-menu&quot;&gt;
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/mach/RUSTSEC-2020-0168.md&quot;&gt;History&lt;/a&gt; ⋅ 
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/mach/RUSTSEC-2020-0168.md&quot;&gt;Edit&lt;/a&gt;
+        &lt;/span&gt;
+    
+
+    &lt;header&gt;
+      &lt;h1&gt;
+        
+        RUSTSEC-2020-0168
+        
+      &lt;/h1&gt;
+      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;mach is unmaintained&lt;/p&gt;
+&lt;/span&gt;
+    &lt;/header&gt;
+
+    
+
+    &lt;dl&gt;
+      &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2020-07-14&quot;&gt;
+          July 14, 2020
+        &lt;/time&gt;
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2023-03-12&quot;&gt;
+          March 12, 2023
+        &lt;/time&gt;
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        
+        &lt;a href=&quot;/packages/mach.html&quot;&gt;mach&lt;/a&gt;
+          (&lt;a href=&quot;https://crates.io/crates/mach&quot;&gt;crates.io&lt;/a&gt;)
+        
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
+        Unmaintained
+        
+      &lt;/dd&gt;
+
+      
+
+      
+
+      
+
+      
+      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;a href=&quot;https://github.com/fitzgen/mach/issues/63&quot;&gt;
+          https://github.com/fitzgen/mach/issues/63
+        &lt;/a&gt;
+      &lt;/dd&gt;
+      
+
+      
+
+      
+      
+
+      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        no patched versions
+        
+      &lt;/dd&gt;
+
+      
+
+      
+      
+    &lt;/dl&gt;
+
+    
+    
+
+    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+    &lt;p&gt;Last release was almost 4 years ago.&lt;/p&gt;
+&lt;p&gt;Maintainer(s) seem to be completely unreachable.&lt;/p&gt;
+&lt;h2&gt;Possible Alternative(s)&lt;/h2&gt;
+&lt;p&gt;These may or may not be suitable alternatives and have not been vetted in any way;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Always ignores the &lt;code&gt;is_valid&lt;/code&gt; argument provided by &lt;code&gt;libgit2&lt;/code&gt;,
-which indicates whether &lt;code&gt;libgit2&lt;/code&gt; considers the host key valid&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;By default, performs no checks, and then
-returns code &lt;code&gt;0&lt;/code&gt;,
-indicating to &lt;code&gt;libgit2&lt;/code&gt; to override &lt;code&gt;libgit2&lt;/code&gt;&apos;s determination
-and treat the host key as valid.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Provides only limited APIs to the application
-for examining the supplied host key,
-and doesn&apos;t tell the application
-whether &lt;code&gt;libgit2&lt;/code&gt;&apos;s checks succeeded,
-so it is difficult for the application cannot work around the problem.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://crates.io/crates/mach2&quot;&gt;mach2&lt;/a&gt; - direct fork&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Resolution&lt;/h2&gt;
-&lt;p&gt;Upgrade to git2-rs 0.16.x.&lt;/p&gt;
-&lt;p&gt;The default behaviour in 0.16.x is to
-honour &lt;code&gt;libgit2&lt;/code&gt;&apos;s validity determination.&lt;/p&gt;
-&lt;p&gt;Note that adding this previously skipped check
-may cause existing setups to stop working.&lt;/p&gt;
-&lt;h2&gt;Relationship to CVE-2022-46176&lt;/h2&gt;
-&lt;p&gt;This bug manifested in cargo where it was assigned CVE-2022-46176.&lt;/p&gt;
-&lt;p&gt;The same bug exists in other applications which use
-affected versions of git2-rs
-unless they never try to access git repositories with &lt;code&gt;ssh:&lt;/code&gt; urls.&lt;/p&gt;
+
+  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2021-0151: ncollide2d is unmaintained</title><id>https://rustsec.org/advisories/RUSTSEC-2021-0151.html</id><updated>2023-03-12T12:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2021-0151.html" rel="alternate" type="text/html" title="RUSTSEC-2021-0151: ncollide2d is unmaintained"/><published>2023-03-12T12:00:00+00:00</published><summary xml:lang="en">ncollide2d is unmaintained</summary><content xml:lang="en" type="html">  &lt;article&gt;
+    
+        &lt;span class=&quot;floating-menu&quot;&gt;
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/ncollide2d/RUSTSEC-2021-0151.md&quot;&gt;History&lt;/a&gt; ⋅ 
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/ncollide2d/RUSTSEC-2021-0151.md&quot;&gt;Edit&lt;/a&gt;
+        &lt;/span&gt;
+    
+
+    &lt;header&gt;
+      &lt;h1&gt;
+        
+        RUSTSEC-2021-0151
+        
+      &lt;/h1&gt;
+      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;ncollide2d is unmaintained&lt;/p&gt;
+&lt;/span&gt;
+    &lt;/header&gt;
+
+    
+
+    &lt;dl&gt;
+      &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2021-01-29&quot;&gt;
+          January 29, 2021
+        &lt;/time&gt;
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2023-03-12&quot;&gt;
+          March 12, 2023
+        &lt;/time&gt;
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        
+        &lt;a href=&quot;/packages/ncollide2d.html&quot;&gt;ncollide2d&lt;/a&gt;
+          (&lt;a href=&quot;https://crates.io/crates/ncollide2d&quot;&gt;crates.io&lt;/a&gt;)
+        
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
+        Unmaintained
+        
+      &lt;/dd&gt;
+
+      
+
+      
+
+      
+
+      
+      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;a href=&quot;https://github.com/dimforge/ncollide&quot;&gt;
+          https://github.com/dimforge/ncollide
+        &lt;/a&gt;
+      &lt;/dd&gt;
+      
+
+      
+
+      
+      
+
+      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        no patched versions
+        
+      &lt;/dd&gt;
+
+      
+
+      
+      
+    &lt;/dl&gt;
+
+    
+    
+
+    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+    &lt;p&gt;The maintainer has advised that this crate is passively-maintained and that it
+is being superseded by the &lt;a href=&quot;https://github.com/dimforge/parry&quot;&gt;Parry&lt;/a&gt; project.&lt;/p&gt;
+
+  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2021-0148: nphysics3d is unmaintained</title><id>https://rustsec.org/advisories/RUSTSEC-2021-0148.html</id><updated>2023-03-11T12:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2021-0148.html" rel="alternate" type="text/html" title="RUSTSEC-2021-0148: nphysics3d is unmaintained"/><published>2023-03-11T12:00:00+00:00</published><summary xml:lang="en">nphysics3d is unmaintained</summary><content xml:lang="en" type="html">  &lt;article&gt;
+    
+        &lt;span class=&quot;floating-menu&quot;&gt;
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/nphysics3d/RUSTSEC-2021-0148.md&quot;&gt;History&lt;/a&gt; ⋅ 
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/nphysics3d/RUSTSEC-2021-0148.md&quot;&gt;Edit&lt;/a&gt;
+        &lt;/span&gt;
+    
+
+    &lt;header&gt;
+      &lt;h1&gt;
+        
+        RUSTSEC-2021-0148
+        
+      &lt;/h1&gt;
+      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;nphysics3d is unmaintained&lt;/p&gt;
+&lt;/span&gt;
+    &lt;/header&gt;
+
+    
+
+    &lt;dl&gt;
+      &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2021-01-29&quot;&gt;
+          January 29, 2021
+        &lt;/time&gt;
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2023-03-11&quot;&gt;
+          March 11, 2023
+        &lt;/time&gt;
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        
+        &lt;a href=&quot;/packages/nphysics3d.html&quot;&gt;nphysics3d&lt;/a&gt;
+          (&lt;a href=&quot;https://crates.io/crates/nphysics3d&quot;&gt;crates.io&lt;/a&gt;)
+        
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
+        Unmaintained
+        
+      &lt;/dd&gt;
+
+      
+
+      
+
+      
+
+      
+      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;a href=&quot;https://github.com/dimforge/nphysics&quot;&gt;
+          https://github.com/dimforge/nphysics
+        &lt;/a&gt;
+      &lt;/dd&gt;
+      
+
+      
+
+      
+      
+
+      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        no patched versions
+        
+      &lt;/dd&gt;
+
+      
+
+      
+      
+    &lt;/dl&gt;
+
+    
+    
+
+    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+    &lt;p&gt;The maintainer has advised that this crate is passively-maintained and that it
+is being superseded by the &lt;a href=&quot;https://github.com/dimforge/rapier&quot;&gt;Rapier&lt;/a&gt; project.&lt;/p&gt;
+
+  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2021-0149: nphysics2d is unmaintained</title><id>https://rustsec.org/advisories/RUSTSEC-2021-0149.html</id><updated>2023-03-11T12:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2021-0149.html" rel="alternate" type="text/html" title="RUSTSEC-2021-0149: nphysics2d is unmaintained"/><published>2023-03-11T12:00:00+00:00</published><summary xml:lang="en">nphysics2d is unmaintained</summary><content xml:lang="en" type="html">  &lt;article&gt;
+    
+        &lt;span class=&quot;floating-menu&quot;&gt;
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/nphysics2d/RUSTSEC-2021-0149.md&quot;&gt;History&lt;/a&gt; ⋅ 
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/nphysics2d/RUSTSEC-2021-0149.md&quot;&gt;Edit&lt;/a&gt;
+        &lt;/span&gt;
+    
+
+    &lt;header&gt;
+      &lt;h1&gt;
+        
+        RUSTSEC-2021-0149
+        
+      &lt;/h1&gt;
+      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;nphysics2d is unmaintained&lt;/p&gt;
+&lt;/span&gt;
+    &lt;/header&gt;
+
+    
+
+    &lt;dl&gt;
+      &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2021-01-29&quot;&gt;
+          January 29, 2021
+        &lt;/time&gt;
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2023-03-11&quot;&gt;
+          March 11, 2023
+        &lt;/time&gt;
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        
+        &lt;a href=&quot;/packages/nphysics2d.html&quot;&gt;nphysics2d&lt;/a&gt;
+          (&lt;a href=&quot;https://crates.io/crates/nphysics2d&quot;&gt;crates.io&lt;/a&gt;)
+        
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
+        Unmaintained
+        
+      &lt;/dd&gt;
+
+      
+
+      
+
+      
+
+      
+      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;a href=&quot;https://github.com/dimforge/nphysics&quot;&gt;
+          https://github.com/dimforge/nphysics
+        &lt;/a&gt;
+      &lt;/dd&gt;
+      
+
+      
+
+      
+      
+
+      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        no patched versions
+        
+      &lt;/dd&gt;
+
+      
+
+      
+      
+    &lt;/dl&gt;
+
+    
+    
+
+    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+    &lt;p&gt;The maintainer has advised that this crate is passively-maintained and that it
+is being superseded by the &lt;a href=&quot;https://github.com/dimforge/rapier&quot;&gt;Rapier&lt;/a&gt; project.&lt;/p&gt;
+
+  &lt;/article&gt;</content></entry><entry><title>RUSTSEC-2023-0019: kuchiki is unmaintained</title><id>https://rustsec.org/advisories/RUSTSEC-2023-0019.html</id><updated>2023-03-07T12:00:00+00:00</updated><link href="https://rustsec.org/advisories/RUSTSEC-2023-0019.html" rel="alternate" type="text/html" title="RUSTSEC-2023-0019: kuchiki is unmaintained"/><published>2023-03-07T12:00:00+00:00</published><summary xml:lang="en">`kuchiki` is unmaintained</summary><content xml:lang="en" type="html">  &lt;article&gt;
+    
+        &lt;span class=&quot;floating-menu&quot;&gt;
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/commits/main/crates/kuchiki/RUSTSEC-2023-0019.md&quot;&gt;History&lt;/a&gt; ⋅ 
+          &lt;a href=&quot;https://github.com/RustSec/advisory-db/edit/main/crates/kuchiki/RUSTSEC-2023-0019.md&quot;&gt;Edit&lt;/a&gt;
+        &lt;/span&gt;
+    
+
+    &lt;header&gt;
+      &lt;h1&gt;
+        
+        RUSTSEC-2023-0019
+        
+      &lt;/h1&gt;
+      &lt;span class=&quot;subtitle&quot;&gt;&lt;p&gt;&lt;code&gt;kuchiki&lt;/code&gt; is unmaintained&lt;/p&gt;
+&lt;/span&gt;
+    &lt;/header&gt;
+
+    
+
+    &lt;dl&gt;
+      &lt;dt id=&quot;reported&quot;&gt;Reported&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2023-01-21&quot;&gt;
+          January 21, 2023
+        &lt;/time&gt;
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;issued&quot;&gt;Issued&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;time datetime=&quot;2023-03-07&quot;&gt;
+          March  7, 2023
+        &lt;/time&gt;
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;package&quot;&gt;Package&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        
+        &lt;a href=&quot;/packages/kuchiki.html&quot;&gt;kuchiki&lt;/a&gt;
+          (&lt;a href=&quot;https://crates.io/crates/kuchiki&quot;&gt;crates.io&lt;/a&gt;)
+        
+        
+      &lt;/dd&gt;
+
+      &lt;dt id=&quot;type&quot;&gt;Type&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        &lt;span class=&quot;tag info&quot;&gt;INFO&lt;/span&gt;
+        Unmaintained
+        
+      &lt;/dd&gt;
+
+      
+
+      
+
+      
+
+      
+      &lt;dt id=&quot;details&quot;&gt;Details&lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;a href=&quot;https://github.com/kuchiki-rs/kuchiki/commit/f92e4c047fdc30619555da282ac7ccce1d313aa6&quot;&gt;
+          https://github.com/kuchiki-rs/kuchiki/commit/f92e4c047fdc30619555da282ac7ccce1d313aa6
+        &lt;/a&gt;
+      &lt;/dd&gt;
+      
+
+      
+
+      
+      
+
+      &lt;dt id=&quot;patched&quot;&gt;Patched&lt;/dt&gt;
+      &lt;dd&gt;
+        
+        no patched versions
+        
+      &lt;/dd&gt;
+
+      
+
+      
+      
+    &lt;/dl&gt;
+
+    
+    
+
+    &lt;h3 id=&quot;description&quot;&gt;Description&lt;/h3&gt;
+    &lt;p&gt;The &lt;code&gt;kuchiki&lt;/code&gt; repo was marked as archived in &lt;a href=&quot;https://github.com/kuchiki-rs/kuchiki/commit/f92e4c047fdc30619555da282ac7ccce1d313aa6&quot;&gt;this&lt;/a&gt; commit.&lt;/p&gt;
+&lt;h2&gt;Possible Alternatives&lt;/h2&gt;
+&lt;p&gt;Possible alternatives may include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://crates.io/crates/html5ever&quot;&gt;html5ever&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://crates.io/crates/xml-rs&quot;&gt;xml-rs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
   &lt;/article&gt;</content></entry></feed>
